@@ -1,0 +1,9 @@
+<div>
+    <h1>Top Rated Movies</h1>
+
+    <ul>
+        <li data-ng-repeat="rated in ::vm.rateds">{{rated.title}}
+            <a href ui-sref="root.movieDetail({id: rated.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ rated.poster_path }}"></a>
+        </li>
+    </ul>
+</div>

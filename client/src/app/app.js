@@ -36,6 +36,7 @@
       'appHeaderComponent',
       'movie-popular',
       'movie-upcoming',
+      'movie-rated',
       'movie-detail',
       'appFooterComponent',
       'common.filters.uppercase',
