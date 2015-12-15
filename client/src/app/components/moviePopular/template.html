@@ -1,9 +1,16 @@
 <div>
-    <h1>Films Populaires</h1>
 
-    <ul>
-        <li data-ng-repeat="movie in ::vm.movies">{{movie.title}}
-            <a href ui-sref="root.movieDetail({id: movie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.backdrop_path }}"></a>
-        </li>
-    </ul>
+    <div class="col-xs-12 col-md-12 col-lg-12 CarousselFilm">
+        <div class="slider">
+            <div>
+                <ul>
+                    <li data-ng-repeat="movie in ::vm.movies">{{movie.title}}
+                        <a href ui-sref="root.movieDetail({id: movie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}"class="slideImg"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <h2>Films Populaires</h2>
 </div>
+
