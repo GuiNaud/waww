@@ -1,0 +1,9 @@
+<div>
+    <h1>Upcoming Movies</h1>
+
+    <ul>
+        <li data-ng-repeat="upcoming in ::vm.upcomings">{{upcoming.title}}
+            <a href ui-sref="root.movieDetail({id: upcoming.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}"></a>
+        </li>
+    </ul>
+</div>

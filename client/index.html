@@ -22,7 +22,10 @@
 <body>
   <div>
     <header ui-view="header"></header>
-    <div ui-view class="moviePop"></div>
+    <div ui-view class="container">
+        <div ui-view="popular"></div>
+        <div ui-view="upcoming"></div>
+    </div>
     <footer ui-view="footer"></footer>
   </div>
 
@@ -46,8 +49,12 @@
   <script type="text/javascript" src="src/app/components/moviePopular/factory.js"></script>
   <script type="text/javascript" src="src/app/components/moviePopular/route.js"></script>
 
-  <!-- Movie Detail -->
+  <!-- MovieUpcoming -->
+  <script type="text/javascript" src="src/app/components/movieUpcoming/directive.js"></script>
+  <script type="text/javascript" src="src/app/components/movieUpcoming/factory.js"></script>
+  <script type="text/javascript" src="src/app/components/movieUpcoming/route.js"></script>
 
+  <!-- Movie Detail -->
   <script type="text/javascript" src="src/app/components/movieDetail/directive.js"></script>
   <script type="text/javascript" src="src/app/components/movieDetail/factory.js"></script>
   <script type="text/javascript" src="src/app/components/movieDetail/route.js"></script>

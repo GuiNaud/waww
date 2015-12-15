@@ -3,17 +3,16 @@
 
     function config($stateProvider){
         $stateProvider
-            .state('root.moviePopular', {
-                url:'/moviePopular',
+            .state('root.movieUpcoming', {
+                url:'/upcoming',
                 views: {
                     '@': {
-                        template : '<movie-popular></movie-popular>'
+                        template : '<movie-upcoming></movie-upcoming>'
                     }
                 }
             })
-
     }
-    angular.module('movie-popular', ['moviePopularDirective'])
+    angular.module('movie-upcoming', ['movieUpcomingDirective'])
         .config(config);
 
 })();
