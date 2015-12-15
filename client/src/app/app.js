@@ -34,6 +34,8 @@
       'ui.router',
       'home',
       'appHeaderComponent',
+      'movie-popular',
+      'movie-detail',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',

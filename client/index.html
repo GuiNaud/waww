@@ -22,13 +22,14 @@
 <body>
   <div>
     <header ui-view="header"></header>
-    <div ui-view class="l-page island"></div>
+    <div ui-view class="moviePop"></div>
     <footer ui-view="footer"></footer>
   </div>
 
   <!-- build:js assets/js/vendor.js -->
   <script type="text/javascript" src="src/vendor/angular/angular.js"></script>
   <script type="text/javascript" src="src/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+  <script type="text/javascript" src="src/vendor/lodash/lodash.min.js"></script>
   <script type="text/javascript" src="src/vendor/jquery/dist/jquery.min.js"></script>
   <!-- endbuild -->
 
@@ -39,6 +40,17 @@
 
   <script type="text/javascript" src="src/app/components/app-header/directive.js"></script>
   <script type="text/javascript" src="src/app/components/app-footer/directive.js"></script>
+
+  <!-- MoviePopular -->
+  <script type="text/javascript" src="src/app/components/moviePopular/directive.js"></script>
+  <script type="text/javascript" src="src/app/components/moviePopular/factory.js"></script>
+  <script type="text/javascript" src="src/app/components/moviePopular/route.js"></script>
+
+  <!-- Movie Detail -->
+
+  <script type="text/javascript" src="src/app/components/movieDetail/directive.js"></script>
+  <script type="text/javascript" src="src/app/components/movieDetail/factory.js"></script>
+  <script type="text/javascript" src="src/app/components/movieDetail/route.js"></script>
 
   <script type="text/javascript" src="src/common/interceptors/httpInterceptor.js"></script>
   <script type="text/javascript" src="src/common/filters/uppercase.js"></script>

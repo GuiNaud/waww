@@ -7,18 +7,13 @@
         url: '/',
         views: {
           '@': {
-            templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home'
+            template: '<movie-popular data-filter="10"></movie-popular>'
           }
         }
       });
   }
 
-  function HomeCtrl() {
-    var vm = this;
-  }
 
   angular.module('home', [])
-    .config(config)
-    .controller('HomeCtrl', HomeCtrl);
+    .config(config);
 })();
