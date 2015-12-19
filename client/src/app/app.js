@@ -40,6 +40,7 @@
       'movie-detail',
       'tv-popular',
       'tv-rated',
+      'tv-airing',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',

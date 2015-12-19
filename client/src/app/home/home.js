@@ -11,7 +11,8 @@
                             '<movie-rated data-filter="10"></movie-rated>' +
                             '<movie-upcoming data-filter="10"></movie-upcoming>' +
                             '<tv-popular data-filter="10"></tv-popular>' +
-                            '<tv-rated data-filter="10"></tv-rated>'
+                            '<tv-rated data-filter="10"></tv-rated>' +
+                            '<tv-airing data-filter="10"></tv-airing>'
             }
         }
       });
