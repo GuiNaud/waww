@@ -1,0 +1,9 @@
+<div>
+    <h1>Popular Tv Shows</h1>
+
+    <ul>
+        <li data-ng-repeat="populartv in ::vm.populartvs">{{populartv.name}}
+            <a href ui-sref="root.tvDetail({id: populartv.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ populartv.poster_path }}"></a>
+        </li>
+    </ul>
+</div>

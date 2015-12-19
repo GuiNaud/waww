@@ -38,6 +38,7 @@
       'movie-upcoming',
       'movie-rated',
       'movie-detail',
+      'tv-popular',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',
