@@ -3,16 +3,16 @@
 
     function config($stateProvider){
         $stateProvider
-            .state('root.movieRated', {
-                url:'/movieRated',
+            .state('root.tvRated', {
+                url:'/tvRated',
                 views: {
                     '@': {
-                        template : '<movie-rated></movie-rated>'
+                        template : '<tv-rated></tv-rated>'
                     }
                 }
             })
     }
-    angular.module('movie-rated', ['movieRatedDirective'])
+    angular.module('tv-rated', ['tvRatedDirective'])
         .config(config);
 
 })();

@@ -1,0 +1,9 @@
+<div>
+    <h1>Top Rated Tv Shows</h1>
+
+    <ul>
+        <li data-ng-repeat="ratedtv in ::vm.ratedtvs">{{ratedtv.name}}
+            <a href ui-sref="root.tvDetail({id: ratedtv.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedtv.poster_path }}"></a>
+        </li>
+    </ul>
+</div>
