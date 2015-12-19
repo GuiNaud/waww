@@ -7,7 +7,8 @@
             replace: true,
             templateUrl: './src/app/components/moviePopular/template.html',
             scope: {
-                filter: "@"
+                filter: "@",
+                page: '@'
             },
             controllerAs: 'vm',
             bindToController: true,
@@ -15,8 +16,9 @@
             controller: function($log, MoviePopularService) {
                 var vm = this;
                 var filter = vm.filter;
-                console.log(filter);
-                MoviePopularService.getMovie().then(function(data) {
+                var page = vm.page;
+                if(!page) page = 1;
+                MoviePopularService.getMovie(page).then(function(data) {
                     vm.popularmovies = filter > 0 ? _.slice(data.data.results, 0, filter) : data.data.results;
                 });
             },
