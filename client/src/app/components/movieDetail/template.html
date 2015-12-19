@@ -1,17 +1,17 @@
 <div>
-    <h1>Theses are the details of {{vm.detail.original_title}}</h1>
+    <h1>{{vm.detailmovie.name}}</h1>
     <h3>Synopsis</h3>
-    <p>{{vm.detail.overview}}</p>
+    <p>{{vm.detailmovie.overview}}</p>
 
     <h3>Moyenne des votes</h3>
-    <p>{{vm.detail.vote_average}}</p>
+    <p>{{vm.detailmovie.vote_average}}</p>
 
     <h3>Nombre de votes</h3>
-    <p>{{vm.detail.vote_count}}</p>
+    <p>{{vm.detailmovie.vote_count}}</p>
 
     <h3>Budget</h3>
-    <p>{{vm.detail.budget}}</p>
+    <p>{{vm.detailmovie.budget}}</p>
 
     <h3>Affiche</h3>
-    <p><img ng-src="http://image.tmdb.org/t/p/w500/{{vm.detail.poster_path}}" alt=""></p>
+    <p><img ng-src="http://image.tmdb.org/t/p/w500/{{vm.detailmovie.poster_path}}" alt=""></p>
 </div>

@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    function MovieDetail(DetailService) {
+    function MovieDetail(MovieDetailService) {
         return {
             restrict: 'EA',
             replace: true,
@@ -10,10 +10,10 @@
             controllerAs: 'vm',
             bindToController: true,
 
-            controller: function($log, DetailService, $stateParams) {
+            controller: function($log, MovieDetailService, $stateParams) {
                 var vm = this;
-                DetailService.getOneMovie($stateParams.id).then(function(data){
-                    vm.detail = data.data;
+                MovieDetailService.getOneMovie($stateParams.id).then(function(data){
+                    vm.detailmovie = data.data;
                 });
             },
             link: function(scope, elm, attrs) {
@@ -22,5 +22,5 @@
         };
     }
 
-    angular.module('movieDetailDirective', ['service.detail']).directive('movieDetail', MovieDetail);
+    angular.module('movieDetailDirective', ['service.detailmovie']).directive('movieDetail', MovieDetail);
 })();

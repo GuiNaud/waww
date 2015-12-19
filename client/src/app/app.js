@@ -41,6 +41,7 @@
       'tv-popular',
       'tv-rated',
       'tv-airing',
+      'tv-detail',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',

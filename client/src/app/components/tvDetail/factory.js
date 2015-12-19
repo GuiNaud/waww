@@ -1,22 +1,22 @@
 (function() {
-   'use strict';
+    'use strict';
 
-    function MovieDetailService($http, $log) {
+    function TvDetailService($http, $log) {
         var service = {};
 
-        service.detailmovie = [];
+        service.detailtv = [];
 
         var key = 'bb7f1b623e15f1c323072c6f2c7c8a2d';
 
         service.getOneMovie = function(movieID){
-            return $http.get('http://api.themoviedb.org/3/movie/' + movieID,{
+            return $http.get('http://api.themoviedb.org/3/tv/' + movieID,{
                 params: {
                     api_key: key
                 }
             })
                 .success(function(data){
                     console.log(data);
-                    service.detailmovie = data;
+                    service.detailtv = data;
                 })
                 .error(function(data){
                     console.log(data);
@@ -26,6 +26,6 @@
         return service;
     }
 
-    angular.module('service.detailmovie', []).factory('MovieDetailService', MovieDetailService);
+    angular.module('service.detailtv', []).factory('TvDetailService', TvDetailService);
 
 })();
