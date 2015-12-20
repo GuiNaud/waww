@@ -1,7 +1,7 @@
 <div>
     <ul>
-        <li data-ng-repeat="genre in ::vm.listmovies">
-            <a href ui-sref="root.movieCategory({id: genre.id})">{{genre.name}}</a>
+        <li data-ng-repeat="listmovie in ::vm.listmovies">
+            <a href ui-sref="root.movieCategory({id: listmovie.id})">{{listmovie.name}}</a>
         </li>
     </ul>
 </div>

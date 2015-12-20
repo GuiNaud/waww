@@ -10,7 +10,7 @@
             controllerAs: 'vm',
             bindToController: true,
             /*jshint unused:false*/
-            controller: function($log, MoviePopularService) {
+            controller: function($log, MovieListService) {
                 var vm = this;
                 MovieListService.getMovie().then(function(data) {
                     vm.listmovies = data.data.genres;
