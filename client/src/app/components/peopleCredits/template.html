@@ -1,0 +1,14 @@
+<div>
+    <h4>Movie</h4>
+    <ul>
+        <li data-ng-repeat="creditspeople in ::vm.creditspeoples" data-ng-if="creditspeople.media_type == 'movie' ">
+                <a href ui-sref="root.movieDetail({id: creditspeople.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.title}}"></a>
+        </li>
+    </ul>
+    <h4>Tv Shows</h4>
+    <ul>
+        <li data-ng-repeat="creditspeople in ::vm.creditspeoples" data-ng-if="creditspeople.media_type == 'tv'">
+                <a href ui-sref="root.tvDetail({id: creditspeople.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.name}}"></a>
+        </li>
+    </ul>
+</div>

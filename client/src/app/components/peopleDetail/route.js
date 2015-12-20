@@ -7,7 +7,7 @@
                 url:'/people/:id',
                 views: {
                     '@': {
-                        template: '<people-detail></people-detail>'
+                        template: '<people-detail></people-detail><people-credits></people-credits>'
                     }
                 }
             })

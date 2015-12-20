@@ -41,6 +41,7 @@
       'movie-similar',
       'movie-credits',
       'people-detail',
+      'people-credits',
       'tv-popular',
       'tv-rated',
       'tv-airing',
