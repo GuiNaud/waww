@@ -2,6 +2,7 @@
     <ul>
         <li data-ng-repeat="listmovie in ::vm.listmovies">
             <a href ui-sref="root.movieCategory({id: listmovie.id, name:listmovie.name})">{{listmovie.name}}</a>
+            <movie-category data-filter="10" data-id="{{listmovie.id}}"></movie-category>
         </li>
     </ul>
 </div>
