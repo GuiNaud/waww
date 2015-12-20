@@ -45,6 +45,7 @@
       'tv-airing',
       'tv-detail',
       'tv-similar',
+      'tv-credits',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',

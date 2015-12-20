@@ -7,7 +7,8 @@
                 url:'/tvshows/:id',
                 views: {
                     '@': {
-                        template: '<tv-detail></tv-detail><tv-similar data-filter="5"></tv-similar>'
+                        template:   '<tv-detail></tv-detail><tv-similar data-filter="5"></tv-similar>' +
+                                    '<tv-credits></tv-credits>'
                     }
                 }
             })
