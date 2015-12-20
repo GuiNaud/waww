@@ -1,0 +1,22 @@
+<div>
+    <h1>{{vm.detailpeople.name}}</h1>
+    <p><img ng-src="http://image.tmdb.org/t/p/w500/{{vm.detailpeople.profile_path}}" alt=""></p>
+
+    <h3>Birthday</h3>
+    <p>{{vm.detailpeople.birthday}}</p>
+
+    <div data-ng-if="vm.detailpeople.deathday">
+        <h3>Deathday</h3>
+        <p>{{vm.detailpeople.deathday}}</p>
+    </div>
+
+    <h3>Place of Birth</h3>
+    <p>{{vm.detailpeople.place_of_birth}}</p>
+
+    <h3>Biography</h3>
+    <p>{{vm.detailpeople.biography}}</p>
+
+    <h3>Known for :</h3>
+
+
+</div>

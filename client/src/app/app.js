@@ -40,6 +40,7 @@
       'movie-detail',
       'movie-similar',
       'movie-credits',
+      'people-detail',
       'tv-popular',
       'tv-rated',
       'tv-airing',
