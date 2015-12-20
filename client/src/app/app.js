@@ -43,6 +43,7 @@
       'tv-rated',
       'tv-airing',
       'tv-detail',
+      'tv-similar',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',

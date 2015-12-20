@@ -4,10 +4,10 @@
     function config($stateProvider) {
         $stateProvider
             .state('root.tvDetail', {
-                url:'/tvDetails/:id',
+                url:'/tvshows/:id',
                 views: {
                     '@': {
-                        template: '<tv-detail></tv-detail>'
+                        template: '<tv-detail></tv-detail><tv-similar data-filter="5"></tv-similar>'
                     }
                 }
             })

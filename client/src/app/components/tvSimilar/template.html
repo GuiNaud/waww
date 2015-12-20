@@ -1,0 +1,8 @@
+<div>
+    <h2>Similar Tv Shows</h2>
+    <ul>
+        <li data-ng-repeat="similartv in ::vm.similartvs">
+            <a href ui-sref="root.tvDetail({id: similartv.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ similartv.poster_path }}"></a>
+        </li>
+    </ul>
+</div>
