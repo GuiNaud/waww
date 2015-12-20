@@ -2,13 +2,19 @@
     <h4>Movie</h4>
     <ul>
         <li data-ng-repeat="creditspeople in ::vm.creditspeoples" data-ng-if="creditspeople.media_type == 'movie' ">
-                <a href ui-sref="root.movieDetail({id: creditspeople.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.title}}"></a>
+                <a href ui-sref="root.movieDetail({id: creditspeople.id})">
+                    <img data-ng-if="creditspeople.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.title}}">
+                    <h5 data-ng-if="!creditspeople.poster_path">{{creditspeople.title}}</h5>
+                </a>
         </li>
     </ul>
     <h4>Tv Shows</h4>
     <ul>
         <li data-ng-repeat="creditspeople in ::vm.creditspeoples" data-ng-if="creditspeople.media_type == 'tv'">
-                <a href ui-sref="root.tvDetail({id: creditspeople.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.name}}"></a>
+                <a href ui-sref="root.tvDetail({id: creditspeople.id})">
+                    <img data-ng-if="creditspeople.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.name}}">
+                    <h5 data-ng-if="!creditspeople.poster_path">{{creditspeople.name}}</h5>
+                </a>
         </li>
     </ul>
 </div>

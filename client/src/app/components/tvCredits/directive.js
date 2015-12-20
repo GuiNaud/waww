@@ -6,14 +6,17 @@
             restrict: 'EA',
             replace: true,
             templateUrl : './src/app/components/tvCredits/template.html',
-            scope: {},
+            scope: {
+                filter: "@"
+            },
             controllerAs: 'vm',
             bindToController: true,
 
             controller: function($log, TvCreditsService, $stateParams) {
                 var vm = this;
+                var filter = vm.filter;
                 TvCreditsService.getOneMovie($stateParams.id).then(function(data){
-                    vm.creditstvs = data.data.cast;
+                    vm.creditstvs = filter > 0 ? _.slice(data.data.cast, 0, filter) : data.data.cast;
                 });
             },
             link: function(scope, elm, attrs) {
