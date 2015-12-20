@@ -1,0 +1,8 @@
+<div>
+    <h1>{{vm.name}}</h1>
+    <ul>
+        <li data-ng-repeat="categorymovie in ::vm.categorymovies">{{ categorymovie.original_title }}
+            <a href ui-sref="root.movieDetail({id: categorymovie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorymovie.poster_path }}"></a>
+        </li>
+    </ul>
+</div>
