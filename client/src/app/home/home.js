@@ -18,7 +18,6 @@
       });
   }
 
-
   angular.module('home', [])
     .config(config);
 })();

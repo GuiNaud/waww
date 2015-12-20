@@ -18,9 +18,9 @@
                 var filter = vm.filter;
                 var page = vm.page;
                 if(!page) page = 1;
-                MoviePopularService.getMovie(page).then(function(data) {
-                    vm.popularmovies = filter > 0 ? _.slice(data.data.results, 0, filter) : data.data.results;
-                });
+                    MoviePopularService.getMovie(page).then(function(data) {
+                        vm.popularmovies = filter > 0 ? _.slice(data.data.results, 0, filter) : data.data.results;
+                    });
             },
             link: function(scope, elm, attrs){
 

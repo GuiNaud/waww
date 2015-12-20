@@ -39,6 +39,7 @@
       'movie-upcoming',
       'movie-detail',
       'movie-similar',
+      'movie-list',
       'movie-credits',
       'people-detail',
       'people-credits',
