@@ -6,9 +6,7 @@
             restrict: 'EA',
             replace: true,
             templateUrl : './src/app/components/movieCategory/template.html',
-            scope: {
-                name: "@"
-            },
+            scope: {},
             controllerAs: 'vm',
             bindToController: true,
 

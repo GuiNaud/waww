@@ -51,6 +51,7 @@
       'tv-similar',
       'tv-credits',
       'tv-list',
+      'tv-category',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',
