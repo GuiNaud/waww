@@ -7,7 +7,8 @@
                 url:'/movies/:id',
                 views: {
                     '@': {
-                        template: '<movie-detail></movie-detail><movie-similar data-filter="5"></movie-similar>'
+                        template: '<movie-detail></movie-detail><movie-similar data-filter="5"></movie-similar>' +
+                                    '<movie-credits></movie-credits>'
                     }
                 }
             })

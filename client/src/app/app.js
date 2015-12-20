@@ -39,6 +39,7 @@
       'movie-upcoming',
       'movie-detail',
       'movie-similar',
+      'movie-credits',
       'tv-popular',
       'tv-rated',
       'tv-airing',
