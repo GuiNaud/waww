@@ -4,10 +4,10 @@
     function config($stateProvider) {
         $stateProvider
             .state('root.movieDetail', {
-                url:'/movieDetails/:id',
+                url:'/movies/:id',
                 views: {
                     '@': {
-                        template: '<movie-detail></movie-detail>'
+                        template: '<movie-detail></movie-detail><movie-similar data-filter="5"></movie-similar>'
                     }
                 }
             })

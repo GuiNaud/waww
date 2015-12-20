@@ -1,0 +1,8 @@
+<div>
+    <h2>Similar movies</h2>
+    <ul>
+        <li data-ng-repeat="similarmovie in ::vm.similarmovies">{{similarmovie.title}}
+            <a href ui-sref="root.movieDetail({id: similarmovie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ similarmovie.poster_path }}"></a>
+        </li>
+    </ul>
+</div>
