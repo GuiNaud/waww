@@ -8,10 +8,11 @@
 
         var key = 'bb7f1b623e15f1c323072c6f2c7c8a2d';
 
-        service.getMovie = function(listID){
+        service.getMovie = function(listID, $page){
             return $http.get('http://api.themoviedb.org/3/genre/' + listID + '/movies',{
                 params: {
                     api_key: key,
+                    page : $page,
                     include_all_movies: true
                 }
             })

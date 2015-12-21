@@ -4,7 +4,7 @@
     function config($stateProvider){
         $stateProvider
             .state('root.moviePopular', {
-                url:'/moviePopular',
+                url:'/moviePopular/:page',
                 views: {
                     '@': {
                         template : '<movie-popular></movie-popular>'
