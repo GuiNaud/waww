@@ -5,7 +5,6 @@
             <a href ui-sref="root.movieDetail({id: popularmovie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ popularmovie.poster_path }}"></a>
         </li>
     </ul>
-
     <a data-ng-if="vm.pageToReload" href ui-sref="root.moviePopular({page: vm.pageToReload})">Previous Results</a>
     <a data-ng-if="!vm.filter" href ui-sref="root.moviePopular({page: vm.pageToLoad})">More Results</a>
 </div>

@@ -18,13 +18,13 @@
                 var page = $stateParams.page ? Number($stateParams.page) : 1;
                 var pageToLoad = page + 1;
                 var pageToReload = page - 1;
-                    MoviePopularService.getMovie(page).then(function(data) {
-                        vm.popularmovies = filter > 0 ? _.slice(data.data.results, 0, filter) : data.data.results;
-                        vm.page = page;
-                        vm.pageToLoad = pageToLoad;
-                        vm.pageToReload = pageToReload;
-                        vm.filter = filter ;
-                    });
+                MoviePopularService.getMovie(page).then(function(data) {
+                    vm.popularmovies = filter > 0 ? _.slice(data.data.results, 0, filter) : data.data.results;
+                    vm.page = page;
+                    vm.pageToLoad = pageToLoad;
+                    vm.pageToReload = pageToReload;
+                    vm.filter = filter ;
+                });
             },
             link: function(scope, elm, attrs){
 
