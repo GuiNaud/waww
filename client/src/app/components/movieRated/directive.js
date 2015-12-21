@@ -20,7 +20,7 @@
                 MovieRatedService.getMovie(page).then(function(data) {
                     vm.ratedmovies = filter > 0 ? _.slice(data.data.results, 0, filter) : data.data.results;
                     vm.page = page;
-                    vm.pageToLoad = pageToLoad;
+                    if(data.data.total_pages > page) vm.pageToLoad = pageToLoad;
                     vm.pageToReload = pageToReload;
                     vm.filter = filter ;
                 });

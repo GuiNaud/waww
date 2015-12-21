@@ -1,9 +1,10 @@
 <div>
-    <h1>Tv Show Airing Today</h1>
-
+    <h1><a data-ng-if="vm.filter" href ui-sref="root.tvAiring({page: vm.page})">Tv Shows Airing Today</a><span data-ng-if="!vm.filter">Tv Shows Airing Today</span></h1>
     <ul>
         <li data-ng-repeat="airing in ::vm.airings">{{airing.name}}
-            <a href ui-sref="root.tvDetail({id: airing.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ airing.poster_path }}"></a>
+            <a href ui-sref="root.tvDetail({id: airing.id})"><img data-ng-if="airing.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ airing.poster_path }}" alt="{{airing.name}}"></a>
         </li>
     </ul>
+    <a data-ng-if="vm.pageToReload" href ui-sref="root.tvAiring({page: vm.pageToReload})">Previous Results</a>
+    <a data-ng-if="vm.pageToLoad && !vm.filter" href ui-sref="root.tvAiring({page: vm.pageToLoad})">More Results</a>
 </div>

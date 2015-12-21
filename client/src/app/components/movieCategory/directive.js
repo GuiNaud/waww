@@ -27,7 +27,7 @@
                     vm.name = name;
                     vm.id = id;
                     vm.page = page;
-                    vm.pageToLoad = pageToLoad;
+                    if(data.data.total_pages > page) vm.pageToLoad = pageToLoad;
                     vm.pageToReload = pageToReload;
                     vm.filter = filter ;
                 });

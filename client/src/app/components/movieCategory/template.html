@@ -2,9 +2,9 @@
     <h1>{{vm.name}}</h1>
     <ul>
         <li data-ng-repeat="categorymovie in ::vm.categorymovies">{{ categorymovie.original_title }}
-            <a href ui-sref="root.movieDetail({id: categorymovie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorymovie.poster_path }}"></a>
+            <a href ui-sref="root.movieDetail({id: categorymovie.id})"><img data-ng-if="categorymovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorymovie.poster_path }}" alt="{{categorymovie.original_title}}"></a>
         </li>
     </ul>
     <a data-ng-if="vm.pageToReload" href ui-sref="root.movieCategory({id: vm.id ,page: vm.pageToReload})">Previous Results</a>
-    <a data-ng-if="!vm.filter" href ui-sref="root.movieCategory({id: vm.id, page: vm.pageToLoad})">More Results</a>
+    <a data-ng-if="vm.pageToLoad && !vm.filter" href ui-sref="root.movieCategory({id: vm.id, page: vm.pageToLoad})">More Results</a>
 </div>
