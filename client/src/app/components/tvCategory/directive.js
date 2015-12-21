@@ -19,9 +19,17 @@
                 var filter = vm.filter;
                 var id = $stateParams.id ? $stateParams.id : vm.id;
                 var name = $stateParams.name ? $stateParams.name : vm.name;
-                TvCategoryService.getMovie(id).then(function(data){
+                var page = $stateParams.page ? Number($stateParams.page) : 1;
+                var pageToLoad = page + 1;
+                var pageToReload = page - 1;
+                TvCategoryService.getMovie(id, page).then(function(data){
                     vm.categorytvs = filter > 0 ? _.slice(data.data.results, 0, filter) : data.data.results;
                     vm.name = name;
+                    vm.id = id;
+                    vm.page = page;
+                    if(data.data.total_pages > page) vm.pageToLoad = pageToLoad;
+                    vm.pageToReload = pageToReload;
+                    vm.filter = filter ;
                 });
             },
             link: function(scope, elm, attrs) {

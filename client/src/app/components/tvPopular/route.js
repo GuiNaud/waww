@@ -4,7 +4,7 @@
     function config($stateProvider){
         $stateProvider
             .state('root.tvPopular', {
-                url:'/tvPopular',
+                url:'/tvPopular/:page',
                 views: {
                     '@': {
                         template : '<tv-popular></tv-popular>'

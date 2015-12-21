@@ -2,7 +2,9 @@
     <h1>{{vm.name}}</h1>
     <ul>
         <li data-ng-repeat="categorytv in ::vm.categorytvs">{{ categorytv.name }}
-            <a href ui-sref="root.tvDetail({id: categorytv.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorytv.poster_path }}"></a>
+            <a href ui-sref="root.tvDetail({id: categorytv.id})"><img data-ng-if="categorytv.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorytv.poster_path }}" alt="{{categorytv.name}}"></a>
         </li>
     </ul>
+    <a data-ng-if="vm.pageToReload" href ui-sref="root.tvCategory({id: vm.id, page: vm.pageToReload})">Previous Results</a>
+    <a data-ng-if="vm.pageToLoad && !vm.filter" href ui-sref="root.tvCategory({id: vm.id, page: vm.pageToLoad})">More Results</a>
 </div>
