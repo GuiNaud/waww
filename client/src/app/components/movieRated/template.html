@@ -2,7 +2,7 @@
     <h1><a data-ng-if="vm.filter" href ui-sref="root.movieRated({page: vm.page})">Top Rated Movies</a><span data-ng-if="!vm.filter">Top Rated Movies</span></h1>
     <ul>
         <li data-ng-repeat="ratedmovie in ::vm.ratedmovies">{{ratedmovie.title}}
-            <a href ui-sref="root.movieDetail({id: ratedmovie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedmovie.poster_path }}"></a>
+            <a href ui-sref="root.movieDetail({id: ratedmovie.id})"><img data-ng-if="ratedmovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedmovie.poster_path }}" alt="{{ratedmovie.title}}"></a>
         </li>
     </ul>
     <a data-ng-if="vm.pageToReload" href ui-sref="root.movieRated({page: vm.pageToReload})">Previous Results</a>
