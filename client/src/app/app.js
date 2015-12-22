@@ -52,6 +52,7 @@
       'tv-credits',
       'tv-list',
       'tv-category',
+      'tv-season',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',

@@ -17,5 +17,12 @@
     <p>{{vm.detailtv.overview}}</p>
     <tv-similar data-filter="10"></tv-similar>
     <tv-credits data-filter="15"></tv-credits>
+    <h3>Seasons</h3>
+    <ul ng-init="myVar=false">
+        <li data-ng-repeat="season in ::vm.detailtv.seasons">
+            <button ng-click="myVar=!myVar">Season {{season.season_number}}</button>
+            <span ng-show="myVar"><tv-season data-id="{{vm.detailtv.id}}" data-season="{{season.season_number}}"></tv-season></span>
+        </li>
+    </ul>
 
 </div>
