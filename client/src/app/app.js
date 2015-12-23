@@ -43,6 +43,7 @@
       'movie-credits',
       'movie-list',
       'movie-category',
+      'movie-video',
       'people-detail',
       'people-credits',
       'tv-popular',

@@ -4,9 +4,6 @@
         <li data-ng-repeat="videotv in ::vm.videostv">
             <button ng-click="myOpen=!myOpen">{{videotv.name}}</button>
             <span ng-show="myOpen"><tv-iframe data-code="{{videotv.key}}"></tv-iframe></span>
-            <!--<div ng-init="vid='http://www.youtube.com/embed/{{videotv.key}}?rel=0'">
-                <iframe width="640" height="352" ng-src="{{vid}}" frameborder="0" allowfullscreen ng-show="myOpen"></iframe>
-            </div>-->
         </li>
     </ul>
 </div>

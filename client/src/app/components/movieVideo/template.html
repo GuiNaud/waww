@@ -1,0 +1,9 @@
+<div>
+    <h3>Videos</h3>
+    <ul ng-init="myOpen=false">
+        <li data-ng-repeat="videomovie in ::vm.videomovies">
+            <button ng-click="myOpen=!myOpen">{{videomovie.name}}</button>
+            <span ng-show="myOpen"><tv-iframe data-code="{{videomovie.key}}"></tv-iframe></span>
+        </li>
+    </ul>
+</div>

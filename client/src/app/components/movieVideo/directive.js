@@ -1,22 +1,22 @@
 (function() {
     'use strict';
 
-    function TvVideo(TvVideoService) {
+    function MovieVideo(MovieVideoService) {
         return {
             restrict: 'EA',
             replace: true,
-            templateUrl : './src/app/components/tvVideo/template.html',
+            templateUrl : './src/app/components/movieVideo/template.html',
             scope: {
                 id: "@"
             },
             controllerAs: 'vm',
             bindToController: true,
 
-            controller: function($log, TvVideoService, $stateParams) {
+            controller: function($log, MovieVideoService, $stateParams) {
                 var vm = this;
                 var id = vm.id ? vm.id : $stateParams.id;
-                TvVideoService.getOneVideo(id).then(function(data){
-                    vm.videostv = data.data.results;
+                MovieVideoService.getOneVideo(id).then(function(data){
+                    vm.videomovies = data.data.results;
                 });
             },
             link: function(scope) {
@@ -25,5 +25,5 @@
         };
     }
 
-    angular.module('tvVideoDirective', ['service.videotv']).directive('tvVideo', TvVideo);
+    angular.module('movieVideoDirective', ['service.videomovie']).directive('movieVideo', MovieVideo);
 })();
