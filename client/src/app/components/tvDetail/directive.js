@@ -12,8 +12,6 @@
 
             controller: function($log, TvDetailService, $stateParams) {
                 var vm = this;
-                var myVar = vm.myVar;
-                myVar = true;
                 TvDetailService.getOneMovie($stateParams.id).then(function(data){
                     vm.detailtv = data.data;
                 });

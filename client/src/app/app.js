@@ -5,7 +5,8 @@
     angular.bootstrap(document, ['app']);
   });
 
-  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider) {
+  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, $sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://www.youtube.com/embed/**']);
     $urlRouterProvider.otherwise('/');
     $logProvider.debugEnabled(true);
     $httpProvider.interceptors.push('httpInterceptor');
@@ -53,6 +54,8 @@
       'tv-list',
       'tv-category',
       'tv-season',
+      'tv-video',
+      'tv-iframe',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',

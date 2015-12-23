@@ -13,7 +13,7 @@
             controllerAs: 'vm',
             bindToController: true,
 
-            controller: function($log, TvSeasonService, $stateParams, $scope) {
+            controller: function($log, TvSeasonService, $stateParams) {
                 var vm = this;
                 var season = vm.season ? vm.season : $stateParams.season;
                 var id = vm.id ? vm.id : $stateParams.id;

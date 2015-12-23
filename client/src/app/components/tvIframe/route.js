@@ -3,15 +3,15 @@
 
     function config($stateProvider) {
         $stateProvider
-            .state('root.tvSeason', {
-                url:'/tvseason/:id/:season',
+            .state('root.tvIframe', {
+                url:'/tvIframe/:code',
                 views: {
                     '@': {
-                        template:'<tv-season></tv-season>'
+                        template:'<tv-iframe></tv-iframe>'
                     }
                 }
             })
     }
 
-    angular.module('tv-season', ['tvSeasonDirective']).config(config);
+    angular.module('tv-iframe', ['tvIframeDirective']).config(config);
 })();

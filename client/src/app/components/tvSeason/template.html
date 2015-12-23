@@ -1,7 +1,8 @@
 <div>
     <ul>
         <li data-ng-repeat="episode in ::vm.seasontv.episodes">
-            Episode {{episode.episode_number}} : {{episode.name}}
+            Episode {{episode.episode_number}} : {{episode.name}}<br>
+            <span data-ng-if="episode.overview">Overview : <br>{{episode.overview}}</span>
         </li>
     </ul>
 </div>
