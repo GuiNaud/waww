@@ -14,12 +14,10 @@
 
             controller: function($log, TvVideoService, $scope) {
                 var vm = this;
-                $scope.code = vm.code
+                $scope.code = vm.code;
             },
             link: function(scope) {
-                console.log(scope.code);
                 scope.$watch('code', function (newval) {
-                    console.log(newval);
                     if(newval) {
                         scope.url = "http://www.youtube.com/embed/"+ newval +"?rel=0";
                     }

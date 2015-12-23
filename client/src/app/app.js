@@ -46,6 +46,7 @@
       'movie-video',
       'people-detail',
       'people-credits',
+      'search',
       'tv-popular',
       'tv-rated',
       'tv-airing',
