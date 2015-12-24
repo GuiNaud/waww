@@ -3,6 +3,7 @@
     <ul>
         <li data-ng-repeat="similartv in ::vm.similartvs">
             <a href ui-sref="root.tvDetail({id: similartv.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ similartv.poster_path }}"></a>
+            <tv-video data-id="{{similartv.id}}" data-filter="1"></tv-video>
         </li>
     </ul>
 </div>

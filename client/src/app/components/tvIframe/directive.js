@@ -16,7 +16,7 @@
                 var vm = this;
                 $scope.code = vm.code;
             },
-            link: function(scope) {
+            link: function(scope, element, attrs) {
                 scope.$watch('code', function (newval) {
                     if(newval) {
                         scope.url = "http://www.youtube.com/embed/"+ newval +"?rel=0";

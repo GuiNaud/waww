@@ -3,27 +3,23 @@
     <ul>
         <h3>Results in Movies</h3>
         <li data-ng-repeat="query in ::vm.querieslist" data-ng-if="query.media_type=='movie'">
-            <span data-ng-if="query.title">
-                <a href ui-sref="root.movieDetail({id: query.id})">
-                    {{query.title}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.title}}">
-                </a>
-            </span>
+            <a href ui-sref="root.movieDetail({id: query.id})">
+                {{query.title}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.title}}">
+            </a>
+            <movie-video data-id="{{query.id}}" data-filter="1"></movie-video>
         </li>
         <h3>Results in Tv Shows</h3>
         <li data-ng-repeat="query in ::vm.querieslist" data-ng-if="query.media_type=='tv'">
-            <span data-ng-if="query.name">
-                <a href ui-sref="root.tvDetail({id: query.id})">
-                    {{query.name}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.name}}">
-                </a>
-            </span>
+            <a href ui-sref="root.tvDetail({id: query.id})">
+                {{query.name}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.name}}">
+            </a>
+            <tv-video data-id="{{query.id}}" data-filter="1"></tv-video>
         </li>
         <h3>Results in People</h3>
-        <li data-ng-repeat="query in ::vm.querieslist" data-ng-if="query.media_type=='person'" ng-model="1">
-            <span data-ng-if="query.name">
-                <a href ui-sref="root.peopleDetail({id: query.id})">
-                    {{query.name}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.name}}">
-                </a>
-            </span>
+        <li data-ng-repeat="query in ::vm.querieslist" data-ng-if="query.media_type=='person'">
+            <a href ui-sref="root.peopleDetail({id: query.id})">
+                {{query.name}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.name}}">
+            </a>
         </li>
     </ul>
 </div>

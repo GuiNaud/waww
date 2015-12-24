@@ -3,3 +3,43 @@
     @include box-sizing();
   }
 }
+
+.fluidvids {
+  width: 100%;
+  position: fixed;
+}
+.fluidvids iframe {
+  border: 0;
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+}
+.closeIframe {
+  display:block;
+  position:fixed;
+  top:9%;
+  right:9%;
+  width:30px;
+  height:30px;
+  background-color: #000;
+  border: 3px solid #fff;
+  text-align: center;
+  color:#fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 50%;
+  z-index:20000;
+  cursor: pointer;
+}
+
+.opack {
+  display:block;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgba(0,0,0, 0.8);
+}
