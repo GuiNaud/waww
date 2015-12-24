@@ -18,6 +18,6 @@
       });
   }
 
-  angular.module('home', [])
+    angular.module('home', [])
     .config(config);
 })();

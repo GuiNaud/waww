@@ -7,10 +7,10 @@
             replace: true,
             templateUrl: './src/app/components/app-header/template.html',
             scope: {},
-            controllerAs: 'vm',
+            controllerAs: 'self',
             bindToController: true,
             /*jshint unused:false*/
-            controller: function($log) {
+            controller: function($log, $scope) {
                 var vm = this;
                 $log.debug('Header loaded');
             },

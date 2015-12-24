@@ -33,6 +33,7 @@
 
   angular.module('app', [
       'ui.router',
+      'ngMaterial',
       'home',
       'appHeaderComponent',
       'movie-popular',
