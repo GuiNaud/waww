@@ -10,7 +10,7 @@
                         template: '<movie-category></movie-category>'
                     }
                 }
-            })
+            });
     }
 
     angular.module('movie-category', ['movieCategoryDirective']).config(config);

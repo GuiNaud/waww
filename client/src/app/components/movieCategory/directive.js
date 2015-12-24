@@ -7,9 +7,9 @@
             replace: true,
             templateUrl : './src/app/components/movieCategory/template.html',
             scope: {
-                filter: "@",
-                name: "@",
-                id: "@"
+                filter: '@',
+                name: '@',
+                id: '@'
             },
             controllerAs: 'vm',
             bindToController: true,
