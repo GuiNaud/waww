@@ -6,15 +6,25 @@
                 <span class="sr-only">TESt</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href ui-sref="root.movies">Movies</a>
+                    <a href ui-sref="root.home">Accueil</a>
                 </li>
                 <li>
-                    <a href ui-sref="root.series">Series</a>
+                    <a href ui-sref="root.movieList">Movies</a>
+                </li>
+                <li>
+                    <a href ui-sref="root.tvList">Tv Shows</a>
+                </li>
+                <li>
+                    <form method="get" action ui-sref="root.search({id: test})">
+                        <input type="text" placeholder="Search" ng-model="test">
+                        <md-button class="md-raised md-primary" type="submit">Rechercher</md-button>
+                    </form>
                 </li>
             </ul>
         </div>

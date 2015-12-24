@@ -1,0 +1,25 @@
+<div>
+    <h2>Search Results</h2>
+    <ul>
+        <h3>Results in Movies</h3>
+        <li data-ng-repeat="query in ::vm.querieslist" data-ng-if="query.media_type=='movie'">
+            <a href ui-sref="root.movieDetail({id: query.id})">
+                {{query.title}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.title}}">
+            </a>
+            <movie-video data-id="{{query.id}}" data-filter="1"></movie-video>
+        </li>
+        <h3>Results in Tv Shows</h3>
+        <li data-ng-repeat="query in ::vm.querieslist" data-ng-if="query.media_type=='tv'">
+            <a href ui-sref="root.tvDetail({id: query.id})">
+                {{query.name}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.name}}">
+            </a>
+            <tv-video data-id="{{query.id}}" data-filter="1"></tv-video>
+        </li>
+        <h3>Results in People</h3>
+        <li data-ng-repeat="query in ::vm.querieslist" data-ng-if="query.media_type=='person'">
+            <a href ui-sref="root.peopleDetail({id: query.id})">
+                {{query.name}} <img data-ng-if="query.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ query.poster_path }}" alt="{{query.name}}">
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,11 @@
+<div data-ng-cloak>
+    <h2>Cast</h2>
+    <ul>
+        <li data-ng-repeat="creditsmovie in ::vm.creditsmovies">
+            <a href ui-sref="root.peopleDetail({id: creditsmovie.id})">
+                {{creditsmovie.name}}
+                <img data-ng-if="creditsmovie.profile_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditsmovie.profile_path }}">
+            </a>
+        </li>
+    </ul>
+</div>

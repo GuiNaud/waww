@@ -1,0 +1,31 @@
+<div style="background: url(http://image.tmdb.org/t/p/w500/{{vm.detailtv.backdrop_path}}) no-repeat fixed center;background-size: cover; color:#fff">
+
+    <h1>{{vm.detailtv.name}}</h1>
+    <ul>
+        <li data-ng-repeat="genre in vm.detailtv.genres">
+            {{genre.name}}
+        </li>
+    </ul>
+
+    <h3>Rating</h3>
+    <p>{{vm.detailtv.vote_average}}/10</p>
+
+    <h3>Release Date</h3>
+    <p>{{vm.detailtv.release_date}}</p>
+
+    <h3>Summary</h3>
+    <p>{{vm.detailtv.overview}}</p>
+
+    <h3>Seasons</h3>
+    <ul ng-init="myVar=false">
+        <li data-ng-repeat="season in ::vm.detailtv.seasons">
+            <button ng-click="myVar=!myVar">Season {{season.season_number}}</button>
+            <span ng-show="myVar"><tv-season data-id="{{vm.detailtv.id}}" data-season="{{season.season_number}}"></tv-season></span>
+        </li>
+    </ul>
+    
+    <tv-video data-id="{{vm.id}}"></tv-video>
+    <tv-similar data-filter="10"></tv-similar>
+    <tv-credits data-filter="15"></tv-credits>
+
+</div>

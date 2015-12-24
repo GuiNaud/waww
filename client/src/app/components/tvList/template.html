@@ -1,0 +1,8 @@
+<div>
+    <ul>
+        <li data-ng-repeat="listtv in ::vm.listtvs">
+            <a href ui-sref="root.tvCategory({id: listtv.id, name: listtv.name})">{{listtv.name}}</a>
+            <tv-category data-filter="5" data-id="{{listtv.id}}"></tv-category>
+        </li>
+    </ul>
+</div>

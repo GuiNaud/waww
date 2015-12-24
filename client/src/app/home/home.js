@@ -6,19 +6,18 @@
       .state('root.home', {
         url: '/',
         views: {
-          '@': {
-            templateUrl: 'src/app/home/home.tpl.html',
-            controller: 'HomeCtrl as home'
-          }
+            '@': {
+                template:   '<movie-popular data-filter="10"></movie-popular>' +
+                            '<movie-rated data-filter="10"></movie-rated>' +
+                            '<movie-upcoming data-filter="10"></movie-upcoming>' +
+                            '<tv-popular data-filter="10"></tv-popular>' +
+                            '<tv-rated data-filter="10"></tv-rated>' +
+                            '<tv-airing data-filter="10"></tv-airing>'
+            }
         }
       });
   }
 
-  function HomeCtrl() {
-    var vm = this;
-  }
-
-  angular.module('home', [])
-    .config(config)
-    .controller('HomeCtrl', HomeCtrl);
+    angular.module('home', [])
+    .config(config);
 })();

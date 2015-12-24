@@ -5,7 +5,8 @@
     angular.bootstrap(document, ['app']);
   });
 
-  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider) {
+  function config($stateProvider, $urlRouterProvider, $logProvider, $httpProvider, $sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist(['self', 'http://www.youtube.com/embed/**']);
     $urlRouterProvider.otherwise('/');
     $logProvider.debugEnabled(true);
     $httpProvider.interceptors.push('httpInterceptor');
@@ -23,7 +24,7 @@
   }
 
   function MainCtrl($log) {
-    $log.debug('MainCtrl laoded!');
+    $log.debug('MainCtrl loaded!');
   }
 
   function run($log) {
@@ -32,8 +33,32 @@
 
   angular.module('app', [
       'ui.router',
+      'ngMaterial',
       'home',
       'appHeaderComponent',
+      'movie-popular',
+      'movie-rated',
+      'movie-upcoming',
+      'movie-detail',
+      'movie-similar',
+      'movie-credits',
+      'movie-list',
+      'movie-category',
+      'movie-video',
+      'people-detail',
+      'people-credits',
+      'search',
+      'tv-popular',
+      'tv-rated',
+      'tv-airing',
+      'tv-detail',
+      'tv-similar',
+      'tv-credits',
+      'tv-list',
+      'tv-category',
+      'tv-season',
+      'tv-video',
+      'tv-iframe',
       'appFooterComponent',
       'common.filters.uppercase',
       'common.interceptors.http',

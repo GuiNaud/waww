@@ -1,0 +1,13 @@
+<div>
+    <h3 data-ng-if="!vm.filter">Videos</h3>
+    <ul ng-init="myOpen=false">
+        <li data-ng-repeat="videomovie in ::vm.videomovies">
+            <button ng-click="myOpen=!myOpen">{{videomovie.name}}</button>
+            <span ng-show="myOpen">
+                <div class="closeIframe" ng-click="myOpen=!myOpen">X</div>
+                <div class="opack" ng-click="myOpen=!myOpen"></div>
+                <tv-iframe data-code="{{videomovie.key}}"></tv-iframe>
+            </span>
+        </li>
+    </ul>
+</div>

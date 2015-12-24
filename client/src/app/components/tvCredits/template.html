@@ -1,0 +1,8 @@
+<div>
+    <h2>Cast</h2>
+    <ul>
+        <li data-ng-repeat="creditstv in ::vm.creditstvs">{{creditstv.name}}
+            <a href ui-sref="root.peopleDetail({id: creditstv.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditstv.profile_path }}"></a>
+        </li>
+    </ul>
+</div>

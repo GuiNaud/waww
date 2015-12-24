@@ -1,0 +1,24 @@
+
+<div style="background: url(http://image.tmdb.org/t/p/w500/{{vm.detailmovie.backdrop_path}}) no-repeat fixed center;background-size: cover; color:#fff" data-ng-cloak>
+
+    <h1>{{vm.detailmovie.title}}</h1>
+    <ul>
+        <li data-ng-repeat="genre in vm.detailmovie.genres">
+            {{genre.name}}
+        </li>
+    </ul>
+
+    <h3>Rating</h3>
+    <p>{{vm.detailmovie.vote_average}}/10</p>
+
+    <h3>Release Date</h3>
+    <p>{{vm.detailmovie.release_date}}</p>
+
+    <h3>Summary</h3>
+    <p>{{vm.detailmovie.overview}}</p>
+
+    <movie-video data-id="{{vm.detailmovie.id}}"></movie-video>
+    <movie-similar data-filter="10"></movie-similar>
+    <movie-credits data-filter="15"></movie-credits>
+
+</div>
