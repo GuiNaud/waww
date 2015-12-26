@@ -21,11 +21,11 @@
 </head>
 
 <body>
-  <div>
-    <header ui-view="header"></header>
-    <div ui-view class="container"></div>
-    <footer ui-view="footer"></footer>
-  </div>
+    <div>
+        <header ui-view="header"></header>
+        <div ui-view class="container-fluid mainContent"></div>
+        <footer ui-view="footer"></footer>
+    </div>
 
   <!-- build:js assets/js/vendor.js -->
   <script type="text/javascript" src="src/vendor/angular/angular.js"></script>
@@ -39,6 +39,7 @@
   <!-- endbuild -->
 
   <!-- build:js assets/js/main.js -->
+  <script type="text/javascript" src="assets/js/main.js"></script>
   <script type="text/javascript" src="src/app/app.js"></script>
 
   <script type="text/javascript" src="src/app/home/home.js"></script>

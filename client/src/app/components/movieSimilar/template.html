@@ -1,4 +1,5 @@
 <div>
+    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
     <h2>Similar Movies</h2>
     <ul>
         <li data-ng-repeat="similarmovie in ::vm.similarmovies">

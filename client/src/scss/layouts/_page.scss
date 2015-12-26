@@ -1,12 +1,19 @@
+//General
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
 
-.l-page {
-  .pure-g > div {
-    @include box-sizing();
-  }
+
+
+.mainContent {
+  margin-top:70px;
+  background-color: $medOrange;
+  padding:0 !important;;
 }
+
+
+//iframes
 
 .fluidvids {
   width: 100%;
@@ -19,6 +26,7 @@
   left: 10%;
   width: 80%;
   height: 80%;
+  border-radius: 10px;
 }
 .closeIframe {
   display:block;

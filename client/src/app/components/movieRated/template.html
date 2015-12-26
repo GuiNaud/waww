@@ -1,4 +1,5 @@
 <div>
+    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
     <h1><a data-ng-if="vm.filter" href ui-sref="root.movieRated({page: vm.page})">Top Rated Movies</a><span data-ng-if="!vm.filter">Top Rated Movies</span></h1>
     <ul>
         <li data-ng-repeat="ratedmovie in ::vm.ratedmovies">{{ratedmovie.title}}

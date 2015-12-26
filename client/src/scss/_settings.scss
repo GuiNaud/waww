@@ -1,6 +1,33 @@
 // Base font size in used in _mixins.scss
 $base-root-size: 16;
 
+//Custom
+
+  /* Colour */
+$orange: #e46c3f;
+$medOrange: #d5653b;
+$darkOrange: #bd5027;
+
+  /* Fonts */
+@font-face {
+  font-family: "Corbert";
+  src: url('../../assets/fonts/Corbert_regular/corbert.eot');
+  src: url('../../assets/fonts/Corbert_regular/corbert.otf') format('truetype'),
+  url('../../assets/fonts/Corbert_regular/corbert.woff') format('woff'),
+  url('../../assets/fonts/Corbert_regular/corbert.eot?#iefix') format('embedded-opentype'),
+  url('../../assets/fonts/Corbert_regular/corbert.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$corbert : 'Corbert', Arial, Helvetica, sans-serif;
+
+  /* Media Queries */
+$phone : "only screen and (max-width : 599px)";
+$tablet : "only screen and (max-width : 1024px)";
+$desktop : "only screen and (min-width : 1025px)";
+
+
 //colors https://github.com/mrmrs/colors/blob/master/sass/_variables.scss
 $aqua: #7fdbff;
 $blue: #0074d9;
@@ -12,7 +39,6 @@ $lime: #01ff70;
 
 // Warm
 $yellow: #ffdc00;
-$orange: #ff851b;
 $red: #ff4136;
 $fuchsia: #f012be;
 $purple: #b10dc9;

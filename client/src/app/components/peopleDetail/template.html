@@ -1,4 +1,5 @@
 <div>
+    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
     <h1>{{vm.detailpeople.name}}</h1>
     <p><img ng-src="http://image.tmdb.org/t/p/w500/{{vm.detailpeople.profile_path}}" alt=""></p>
 

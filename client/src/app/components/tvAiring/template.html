@@ -1,4 +1,5 @@
 <div>
+    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
     <h1><a data-ng-if="vm.filter" href ui-sref="root.tvAiring({page: vm.page})">Tv Shows Airing Today</a><span data-ng-if="!vm.filter">Tv Shows Airing Today</span></h1>
     <ul>
         <li data-ng-repeat="airing in ::vm.airings">{{airing.name}}

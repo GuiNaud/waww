@@ -88,3 +88,17 @@ pre {
 h4 {
   @include font-size(21);
 }
+
+ul, li {
+  list-style: none !important;
+  display: inline !important;
+}
+
+img {
+  max-width:200px;
+  max-height:200px;
+}
+
+body{
+  font-family: $corbert;
+}

@@ -1,4 +1,5 @@
 <div>
+    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
     <ul>
         <li data-ng-repeat="listtv in ::vm.listtvs">
             <a href ui-sref="root.tvCategory({id: listtv.id, name: listtv.name})">{{listtv.name}}</a>

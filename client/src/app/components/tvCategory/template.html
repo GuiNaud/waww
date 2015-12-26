@@ -1,4 +1,5 @@
 <div>
+    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
     <h1>{{vm.name}}</h1>
     <ul>
         <li data-ng-repeat="categorytv in ::vm.categorytvs">{{ categorytv.name }}
