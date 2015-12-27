@@ -1,12 +1,15 @@
-<div>
-    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
-    <h1><a data-ng-if="vm.filter" href ui-sref="root.tvPopular({page: vm.page})">Popular Tv Shows</a><span data-ng-if="!vm.filter">Popular Tv Shows</span></h1>
-    <ul>
-        <li data-ng-repeat="populartv in ::vm.populartvs">{{populartv.name}}
-            <a href ui-sref="root.tvDetail({id: populartv.id})"><img data-ng-if="populartv.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ populartv.poster_path }}" alt="{{populartv.name}}"></a>
-            <tv-video data-id="{{populartv.id}}" data-filter="1"></tv-video>
-        </li>
-    </ul>
+<div class="homeView">
+    <h1 data-ng-if="!vm.filter"><button data-ng-if="!vm.filter" onclick="goBack()"><i class="fa fa-angle-left"></i></button>Popular Tv Shows</h1>
+    <div class="results">
+        <ul>
+            <li data-ng-repeat="populartv in ::vm.populartvs">
+                <a href ui-sref="root.tvDetail({id: populartv.id})">
+                    <img data-ng-if="populartv.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ populartv.poster_path }}" alt="{{populartv.name}}">
+                </a>
+            </li>
+        </ul>
+    </div>
     <a data-ng-if="vm.pageToReload" href ui-sref="root.tvPopular({page: vm.pageToReload})">Previous Results</a>
     <a data-ng-if="vm.pageToLoad && !vm.filter" href ui-sref="root.tvPopular({page: vm.pageToLoad})">More Results</a>
+    <h1><a data-ng-if="vm.filter" href ui-sref="root.tvPopular({page: vm.page})">Popular Tv Shows</a></h1>
 </div>

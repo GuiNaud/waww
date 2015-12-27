@@ -1,12 +1,13 @@
-<div>
-    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
-    <h1><a data-ng-if="vm.filter" href ui-sref="root.tvRated({page: vm.page})">Top Rated Tv Shows</a><span data-ng-if="!vm.filter">Top Rated Tv Shows</span></h1>
-    <ul>
-        <li data-ng-repeat="ratedtv in ::vm.ratedtvs">{{ratedtv.name}}
-            <a href ui-sref="root.tvDetail({id: ratedtv.id})"><img data-ng-if="ratedtv.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedtv.poster_path }}" alt="{{ratedtv.name}}"></a>
-            <tv-video data-id="{{ratedtv.id}}" data-filter="1"></tv-video>
-        </li>
-    </ul>
+<div class="homeView">
+    <h1 data-ng-if="!vm.filter"><button data-ng-if="!vm.filter" onclick="goBack()"><i class="fa fa-angle-left"></i></button>Top Rated Tv Shows</h1>
+    <div class="results">
+        <ul>
+            <li data-ng-repeat="ratedtv in ::vm.ratedtvs">
+                <a href ui-sref="root.tvDetail({id: ratedtv.id})"><img data-ng-if="ratedtv.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedtv.poster_path }}" alt="{{ratedtv.name}}"></a>
+            </li>
+        </ul>
+    </div>
     <a data-ng-if="vm.pageToReload" href ui-sref="root.tvRated({page: vm.pageToReload})">Previous Results</a>
     <a data-ng-if="vm.pageToLoad && !vm.filter" href ui-sref="root.tvRated({page: vm.pageToLoad})">More Results</a>
+    <h1><a data-ng-if="vm.filter" href ui-sref="root.tvRated({page: vm.page})">Top Rated Tv Shows</a></h1>
 </div>
