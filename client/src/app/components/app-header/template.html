@@ -22,8 +22,10 @@
             </ul>
         </div>
         <form id="search" method="get" action ui-sref="root.search({id: test})">
-            <md-input-container md-no-float=""><input type="text" placeholder="Search" ng-model="test"></md-input-container>
-            <md-button onmouseenter="displayInput()"  type="submit"><i class="fa fa-search"></i></md-button>
+            <md-input-container md-no-float=""><input type="text" name="test" placeholder="Search" ng-model="test" required>
+                <span class="alert alert-danger" ng-show="test.$error.required">Please enter something</span>
+            </md-input-container>
+            <md-button ontouchend="displayInput()"  type="button"><i class="fa fa-search"></i></md-button>
         </form>
     </nav>
 </div>

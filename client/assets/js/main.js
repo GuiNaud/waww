@@ -1,4 +1,14 @@
-function displayInput() {if(!$("#search .md-input-has-placeholder").is(':visible')) $("#search .md-input-has-placeholder").show();}
+function displayInput() {
+    $("#search .md-button").on('click', function(event) {
+        if(!$("#search .md-input-has-placeholder").is(':visible')) {
+            event.preventDefault();
+            $("#search .md-input-has-placeholder").show();
+        } else {
+            $("#search .md-input-has-placeholder").val('');
+        }
+    });
+
+}
 
 function goBack() {window.history.back()}
 

@@ -60,13 +60,11 @@
       margin-top: 12px;
     }
     .md-input-has-placeholder {
+      display:none;
       margin:0 !important;
       width: 100px;
       border-color:#fff;
       color:#fff;
-      @media #{$desktop} {
-        display:none;
-      }
       ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
         color:    #fff;
       }

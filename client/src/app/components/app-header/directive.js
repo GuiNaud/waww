@@ -15,7 +15,17 @@
                 $log.debug('Header loaded');
             },
             link: function(scope, elm, attrs) {
-
+                scope.displayInput = function(event) {
+                    if(!$("#search .md-input-has-placeholder").is(':visible')) {
+                        event.preventDefault();
+                        $("#search .md-input-has-placeholder").show();
+                    } else if(!scope.test) {
+                        event.preventDefault();
+                        $("#search .md-input-has-placeholder").hide();
+                    } else {
+                        scope.test = '';
+                    }
+                }
             }
         };
     }
