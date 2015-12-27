@@ -1,10 +1,10 @@
 function displayInput() {
     $("#search .md-button").on('click', function(event) {
+        event.preventDefault();
         if(!$("#search .md-input-has-placeholder").is(':visible')) {
-            event.preventDefault();
             $("#search .md-input-has-placeholder").show();
         } else {
-            $("#search .md-input-has-placeholder").val('');
+            $("#search .md-input-has-placeholder, .autocomplete").hide();
         }
     });
 
@@ -14,7 +14,7 @@ function goBack() {window.history.back()}
 
 function rotateBar() {
     if($(".navbar-toggle .icon-bar:nth-child(3)").is(':visible')) {
-        $(".navbar-toggle").css('margin', '15px 15px 15px 10px');
+        $(".navbar-toggle").css('margin', '15px 15px 11px 10px');
         $(".navbar-toggle .icon-bar:nth-child(2)").css({
             transform : 'rotate(45deg)',
             webkit: 'rotate(45deg)',
