@@ -6,7 +6,9 @@
             restrict: 'EA',
             replace: true,
             templateUrl: './src/app/components/tvList/template.html',
-            scope: {},
+            scope: {
+                toLoad: '='
+            },
             controllerAs: 'vm',
             bindToController: true,
 
@@ -17,7 +19,7 @@
                 });
             },
             link: function(scope, elm, attrs){
-
+                scope.toLoad = $(window).width() >= 767 ? true : false;
             }
         };
     }

@@ -1,11 +1,11 @@
 <div class="listMedia">
     <md-button data-ng-if="!vm.filter" onclick="goBack()"><i class="fa fa-angle-left fa-2x"></i></md-button><h1>Categories</h1>
-    <ul>
-        <li data-ng-repeat="listtv in ::vm.listtvs">
+    <ul ng-init="toLoad=false">
+        <li data-ng-repeat="listtv in ::vm.listtvs" ng-model="toLoad">
             <a href ui-sref="root.tvCategory({id: listtv.id, name: listtv.name})"><img src="../../../../assets/images/tv/{{listtv.name}}.png" alt="{{listtv.name}}">{{listtv.name}}</a>
-            <!--<span class="resultsByCategory">
+            <span class="resultsByCategory" data-ng-if="toLoad">
                 <tv-category data-filter="5" data-id="{{listtv.id}}"></tv-category>
-            </span>-->
+            </span>
         </li>
     </ul>
 </div>

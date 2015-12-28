@@ -6,7 +6,9 @@
             restrict: 'EA',
             replace: true,
             templateUrl: './src/app/components/movieList/template.html',
-            scope: {},
+            scope: {
+                toLoad: '='
+            },
             controllerAs: 'vm',
             bindToController: true,
             /*jshint unused:false*/
@@ -15,9 +17,10 @@
                 MovieListService.getMovie().then(function(data) {
                     vm.listmovies = data.data.genres;
                 });
+
             },
             link: function(scope, elm, attrs){
-
+                scope.toLoad = $(window).width() >= 767 ? true : false;
             }
         };
     }

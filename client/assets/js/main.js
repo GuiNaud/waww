@@ -1,3 +1,4 @@
+
 function displayInput() {
     $("#search .md-button").on('click', function(event) {
         event.preventDefault();
@@ -7,10 +8,11 @@ function displayInput() {
             $("#search .md-input-has-placeholder, .autocomplete").hide();
         }
     });
-
 }
 
-function goBack() {window.history.back()}
+function goBack() {
+    window.history.back();
+}
 
 function rotateBar() {
     if($(".navbar-toggle .icon-bar:nth-child(3)").is(':visible')) {
