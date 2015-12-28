@@ -1,13 +1,29 @@
 <div class="homeView">
-    <h1 data-ng-if="!vm.filter"><md-button data-ng-if="!vm.filter" onclick="goBack()"><i class="fa fa-angle-left"></i></md-button>Upcomings Movies</h1>
-    <div class="results">
+    <div data-ng-if="!vm.filter" class="title">
+        <md-button onclick="goBack()"><i class="fa fa-angle-left fa-2x"></i></md-button><h1>Upcomings Movies</h1>
+    </div>
+    <div data-ng-if="vm.filter" class="results">
         <ul>
             <li data-ng-repeat="upcoming in ::vm.upcomings">
-                <a href ui-sref="root.movieDetail({id: upcoming.id})"><img data-ng-if="upcoming.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{upcoming.title}}"></a>
+                <a href ui-sref="root.movieDetail({id: upcoming.id})">
+                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.title }}">
+                </a>
             </li>
         </ul>
     </div>
-    <a data-ng-if="vm.pageToReload" href ui-sref="root.movieUpcoming({page: vm.pageToReload})">Previous Results</a>
-    <a data-ng-if="vm.pageToLoad && !vm.filter" href ui-sref="root.movieUpcoming({page: vm.pageToLoad})">More Results</a>
-    <h1><a data-ng-if="vm.filter" href ui-sref="root.movieUpcoming({page: vm.page})">Upcoming Movies</a></h1>
+    <div data-ng-if="!vm.filter" class="resultsAll">
+        <ul>
+            <li data-ng-repeat="upcoming in ::vm.upcomings">
+                <a href ui-sref="root.movieDetail({id: upcoming.id})">
+                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.title }}">
+                </a>
+                <movie-video data-filter="1" data-id="{{upcoming.id}}"></movie-video>
+            </li>
+        </ul>
+    </div>
+    <div data-ng-if="!vm.filter" class="link">
+        <a data-ng-if="vm.pageToReload" href ui-sref="root.movieUpcoming({page: vm.pageToReload})">Previous Results - </a>
+        <a data-ng-if="vm.pageToLoad && !vm.filter" href ui-sref="root.movieUpcoming({page: vm.pageToLoad})">More Results</a>
+    </div>
+    <h1 data-ng-if="vm.filter"><a href ui-sref="root.movieUpcoming({page: vm.page})">Upcoming Movies</a></h1>
 </div>

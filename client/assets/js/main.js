@@ -4,8 +4,10 @@ function displayInput() {
         event.preventDefault();
         if(!$("#search .md-input-has-placeholder").is(':visible')) {
             $("#search .md-input-has-placeholder").show();
+            $(".navbar h2").hide();
         } else {
             $("#search .md-input-has-placeholder, .autocomplete").hide();
+            $(".navbar h2").show();
         }
     });
 }

@@ -6,7 +6,7 @@
         <ul>
             <li data-ng-repeat="popularmovie in ::vm.popularmovies">
                 <a href ui-sref="root.movieDetail({id: popularmovie.id})">
-                    <img data-ng-if="popularmovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ popularmovie.poster_path }}" alt="{{ popularmovie.title }}">
+                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ popularmovie.poster_path }}" alt="{{ popularmovie.title }}">
                 </a>
             </li>
         </ul>
@@ -15,7 +15,7 @@
         <ul>
             <li data-ng-repeat="popularmovie in ::vm.popularmovies">
                 <a href ui-sref="root.movieDetail({id: popularmovie.id})">
-                    <img data-ng-if="popularmovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ popularmovie.poster_path }}" alt="{{ popularmovie.title }}">
+                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ popularmovie.poster_path }}" alt="{{ popularmovie.title }}">
                 </a>
                 <movie-video data-filter="1" data-id="{{popularmovie.id}}"></movie-video>
             </li>
