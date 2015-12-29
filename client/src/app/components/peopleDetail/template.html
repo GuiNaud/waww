@@ -1,22 +1,29 @@
-<div>
-    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
-    <h1>{{vm.detailpeople.name}}</h1>
-    <p><img ng-src="http://image.tmdb.org/t/p/w500/{{vm.detailpeople.profile_path}}" alt=""></p>
-
-    <h3>Birthday</h3>
-    <p>{{vm.detailpeople.birthday}}</p>
-
-    <div data-ng-if="vm.detailpeople.deathday">
-        <h3>Deathday</h3>
-        <p>{{vm.detailpeople.deathday}}</p>
+<div class="detailView" style="background: url(http://image.tmdb.org/t/p/w500/{{vm.detailpeople.profile_path}}) no-repeat fixed center;background-size: cover;" data-ng-cloak>
+    <div class="lighter"></div>
+    <div data-ng-if="!vm.filter" class="title">
+        <md-button onclick="goBack()"><i class="fa fa-angle-left fa-2x"></i></md-button><h1>{{vm.detailpeople.name}}</h1>
     </div>
 
-    <h3>Place of Birth</h3>
-    <p>{{vm.detailpeople.place_of_birth}}</p>
+    <div class="rating" data-ng-if="vm.detailpeople.birthday">
+        <h3>Birthday</h3>
+        <p>{{vm.detailpeople.birthday | date}}</p>
+    </div>
 
-    <h3>Biography</h3>
-    <p>{{vm.detailpeople.biography}}</p>
 
-    <h3>Known for :</h3>
+    <div class="release" data-ng-if="vm.detailpeople.deathday">
+        <h3>Deathday</h3>
+        <p>{{vm.detailpeople.deathday | date}}</p>
+    </div>
 
+    <div class="summary" data-ng-if="vm.detailpeople.place_of_birth">
+        <h3>Place of Birth</h3>
+        <p>{{vm.detailpeople.place_of_birth}}</p>
+    </div>
+
+    <div class="bio" data-ng-if="vm.detailpeople.biography">
+        <h3>Biography</h3>
+        <p>{{vm.detailpeople.biography}}</p>
+    </div>
+
+    <people-credits></people-credits>
 </div>

@@ -1,22 +1,22 @@
-<div>
-    <h4>Movie</h4>
-    <ul>
-        <li data-ng-repeat="creditspeople in ::vm.creditspeoples" data-ng-if="creditspeople.media_type == 'movie' ">
-            <a href ui-sref="root.movieDetail({id: creditspeople.id})">
-                <img data-ng-if="creditspeople.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.title}}">
-                <h5 data-ng-if="!creditspeople.poster_path">{{creditspeople.title}}</h5>
-            </a>
-            <movie-video data-id="{{creditspeople.id}}" data-filter="1"></movie-video>
-        </li>
-    </ul>
-    <h4>Tv Shows</h4>
-    <ul>
-        <li data-ng-repeat="creditspeople in ::vm.creditspeoples" data-ng-if="creditspeople.media_type == 'tv'">
-            <a href ui-sref="root.tvDetail({id: creditspeople.id})">
-                <img data-ng-if="creditspeople.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.name}}">
-                <h5 data-ng-if="!creditspeople.poster_path">{{creditspeople.name}}</h5>
-            </a>
-            <tv-video data-id="{{creditspeople.id}}" data-filter="1"></tv-video>
-        </li>
-    </ul>
+<div class="peopleCredits">
+    <h4>Movies Appearances</h4>
+    <div class="similar">
+        <ul>
+            <li data-ng-repeat="creditspeople in ::vm.creditspeoples" data-ng-if="creditspeople.media_type == 'movie' ">
+                <a href ui-sref="root.movieDetail({id: creditspeople.id})">
+                    <img data-ng-if="creditspeople.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.title}}">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <h4>Tv Shows Appearances</h4>
+    <div class="similar">
+        <ul>
+            <li data-ng-repeat="creditspeople in ::vm.creditspeoples" data-ng-if="creditspeople.media_type == 'tv'">
+                <a href ui-sref="root.tvDetail({id: creditspeople.id})">
+                    <img data-ng-if="creditspeople.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditspeople.poster_path }}" alt="{{creditspeople.name}}">
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

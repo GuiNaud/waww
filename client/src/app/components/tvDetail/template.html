@@ -13,12 +13,12 @@
 
     <tv-video data-id="{{vm.id}}" data-filter="1"></tv-video>
 
-    <div class="rating">
+    <div class="rating" data-ng-if="vm.detailtv.vote_average">
         <h3>Rating</h3>
         <p>{{vm.detailtv.vote_average}}/10</p>
     </div>
 
-    <div class="release">
+    <div class="release" data-ng-if="vm.detailtv.first_air_date">
         <h3>Release Date</h3>
         <p>{{vm.detailtv.first_air_date | date}}</p>
     </div>
@@ -34,12 +34,12 @@
 
     <tv-credits data-filter="5"></tv-credits>
 
-    <div class="summary">
+    <div class="summary" data-ng-if="vm.detailtv.overview">
         <h3>Summary</h3>
         <p>{{vm.detailtv.overview}}</p>
     </div>
 
-    <div class="seasons">
+    <div class="seasons" data-ng-if="vm.detailtv.seasons">
         <h3>Seasons</h3>
         <ul ng-init="myVar=false">
             <li data-ng-repeat="season in ::vm.detailtv.seasons">
@@ -49,9 +49,6 @@
         </ul>
     </div>
 
-    
-
-    <h3>Similar Tv Shows</h3>
     <tv-similar></tv-similar>
 
 </div>
