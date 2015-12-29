@@ -1,8 +1,8 @@
-<div>
+<div class="episode" ng-init="episodeDisplay=false">
     <ul>
         <li data-ng-repeat="episode in ::vm.seasontv.episodes">
-            Episode {{episode.episode_number}} : {{episode.name}}<br>
-            <span data-ng-if="episode.overview">Overview : <br>{{episode.overview}}</span>
+            <button ng-click="episodeDisplay=!episodeDisplay">Episode {{episode.episode_number}} : {{episode.name}}</button>
+            <span ng-show="episodeDisplay" data-ng-if="episode.overview"><p>{{episode.overview}}</p></span>
         </li>
     </ul>
 </div>

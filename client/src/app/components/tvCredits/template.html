@@ -1,8 +1,13 @@
-<div>
-    <h2>Cast</h2>
-    <ul>
-        <li data-ng-repeat="creditstv in ::vm.creditstvs">{{creditstv.name}}
-            <a href ui-sref="root.peopleDetail({id: creditstv.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditstv.profile_path }}"></a>
-        </li>
-    </ul>
+<div class="creditsTv">
+    <div class="cast">
+        <h3>Cast</h3>
+        <ul>
+            <li data-ng-repeat="creditstv in ::vm.creditstvs">
+                <a href ui-sref="root.peopleDetail({id: creditstv.id})">
+                    {{creditstv.name}}
+                    <img data-ng-if="creditstv.profile_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditstv.profile_path }}">
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

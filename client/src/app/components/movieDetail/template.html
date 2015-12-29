@@ -1,4 +1,3 @@
-
 <div class="detailView" style="background: url(http://image.tmdb.org/t/p/w500/{{vm.detailmovie.backdrop_path}}) no-repeat fixed center;background-size: cover;" data-ng-cloak>
     <div class="lighter"></div>
     <div data-ng-if="!vm.filter" class="title">
@@ -6,7 +5,7 @@
     </div>
     <div class="cat">
         <ul>
-            <li data-ng-repeat="genre in vm.detailmovie.genres">
+            <li data-ng-repeat="genre in ::vm.detailmovie.genres">
                 <a href ui-sref="root.movieCategory({id: genre.id, name: genre.name})">{{genre.name}}</a>
             </li>
         </ul>
@@ -32,5 +31,5 @@
     </div>
 
     <h3>Similar Movies</h3>
-    <movie-similar data-filter="10"></movie-similar>
+    <movie-similar></movie-similar>
 </div>

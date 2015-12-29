@@ -11,7 +11,6 @@
             },
             controllerAs: 'vm',
             bindToController: true,
-
             controller: function($log, TvCreditsService, $stateParams) {
                 var vm = this;
                 var filter = vm.filter;

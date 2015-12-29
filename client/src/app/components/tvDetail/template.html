@@ -1,31 +1,57 @@
-<div style="background: url(http://image.tmdb.org/t/p/w500/{{vm.detailtv.backdrop_path}}) no-repeat fixed center;background-size: cover; color:#fff">
-    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
-    <h1>{{vm.detailtv.name}}</h1>
-    <ul>
-        <li data-ng-repeat="genre in vm.detailtv.genres">
-            {{genre.name}}
-        </li>
-    </ul>
+<div class="detailView" style="background: url(http://image.tmdb.org/t/p/w500/{{vm.detailtv.backdrop_path}}) no-repeat fixed center;background-size: cover;" data-ng-cloak>
+    <div class="lighter"></div>
+    <div data-ng-if="!vm.filter" class="title">
+        <md-button onclick="goBack()"><i class="fa fa-angle-left fa-2x"></i></md-button><h1>{{vm.detailtv.name}}</h1>
+    </div>
+    <div class="cat">
+        <ul>
+            <li data-ng-repeat="genre in ::vm.detailtv.genres">
+                <a href ui-sref="root.tvCategory({id: genre.id, name: genre.name})">{{genre.name}}</a>
+            </li>
+        </ul>
+    </div>
 
-    <h3>Rating</h3>
-    <p>{{vm.detailtv.vote_average}}/10</p>
+    <tv-video data-id="{{vm.id}}" data-filter="1"></tv-video>
 
-    <h3>Release Date</h3>
-    <p>{{vm.detailtv.release_date}}</p>
+    <div class="rating">
+        <h3>Rating</h3>
+        <p>{{vm.detailtv.vote_average}}/10</p>
+    </div>
 
-    <h3>Summary</h3>
-    <p>{{vm.detailtv.overview}}</p>
+    <div class="release">
+        <h3>Release Date</h3>
+        <p>{{vm.detailtv.first_air_date | date}}</p>
+    </div>
 
-    <h3>Seasons</h3>
-    <ul ng-init="myVar=false">
-        <li data-ng-repeat="season in ::vm.detailtv.seasons">
-            <button ng-click="myVar=!myVar">Season {{season.season_number}}</button>
-            <span ng-show="myVar"><tv-season data-id="{{vm.detailtv.id}}" data-season="{{season.season_number}}"></tv-season></span>
-        </li>
-    </ul>
+    <div class="creator">
+        <h3>Creator</h3>
+        <ul>
+            <li data-ng-repeat="creator in ::vm.detailtv.created_by">
+                <a href ui-sref="root.peopleDetail({id: creator.id})">{{creator.name}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <tv-credits data-filter="5"></tv-credits>
+
+    <div class="summary">
+        <h3>Summary</h3>
+        <p>{{vm.detailtv.overview}}</p>
+    </div>
+
+    <div class="seasons">
+        <h3>Seasons</h3>
+        <ul ng-init="myVar=false">
+            <li data-ng-repeat="season in ::vm.detailtv.seasons">
+                <button ng-click="myVar=!myVar">{{season.season_number}}</button>
+                <span ng-show="myVar"><tv-season data-id="{{vm.detailtv.id}}" data-season="{{season.season_number}}" data-ng-if="myVar"></tv-season></span>
+            </li>
+        </ul>
+    </div>
+
     
-    <tv-video data-id="{{vm.id}}"></tv-video>
-    <tv-similar data-filter="10"></tv-similar>
-    <tv-credits data-filter="15"></tv-credits>
+
+    <h3>Similar Tv Shows</h3>
+    <tv-similar></tv-similar>
 
 </div>
