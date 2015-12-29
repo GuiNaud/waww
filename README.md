@@ -12,4 +12,5 @@ After that, install angular-kickstart downloading the [latest release](https://g
     $ bower install
     $ bower install bootstrap --save -dev
     $ bower install lodash --save -dev
+    $ bower install angular-material --save -dev
     $ gulp serve
