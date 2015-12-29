@@ -4,8 +4,9 @@
   margin-bottom: 0;
   background-color: $orange;
   .navbar-header {
-    @media #{$tablet} {
-      display:inline-block !important;
+    display:none;
+    @media #{$phone} {
+      display:inline-block;
     }
     .navbar-toggle {
       display: inline-block;
@@ -29,7 +30,7 @@
   }
   .navbar-collapse {
     border-color:#fff;
-    @media #{$desktop} {
+    @media #{$tablet} {
       display:inline-block !important;
     }
     .navbar-nav {
@@ -44,7 +45,7 @@
           font-size: 1.2em;
           font-weight: 300;
           padding: 20px;
-          @media #{$desktop} {
+          @media #{$tablet} {
             font-size: 1.7em;
             &:hover {
               color: #d9d9d9;
@@ -61,7 +62,7 @@
     right:0;
     display:inline-block;
     margin-top: 5px;
-    @media #{$desktop} {
+    @media #{$tablet} {
       float:right;
       margin-top: 12px;
     }
@@ -82,6 +83,10 @@
       :-ms-input-placeholder { /* Internet Explorer 10-11 */
         color:    #fff;
       }
+      @media #{$tablet} {
+        width:200px;
+        font-size: 1.3em;
+      }
       .md-input {
         border-color:#fff;
         padding:0;
@@ -89,6 +94,9 @@
         color:#fff;
         &:focus {
           border-color:#fff;
+        }
+        @media #{$tablet} {
+          padding-top: 0;
         }
       }
     }
@@ -99,13 +107,13 @@
       margin:0;
       margin-top:6px;
       min-width:60px;
-      @media #{$desktop} {
+      @media #{$tablet} {
         font-size: 2em;
       }
       &:hover {
         background-color: transparent;
       }
-      @media #{$desktop} {
+      @media #{$tablet} {
         &:hover {
           color: #d9d9d9;
           transition: color 0.5s ease;
@@ -129,6 +137,9 @@
       padding: 20px 0;
       border-bottom : 1px solid #7c7c7c;
       background-color: #000;
+      @media #{$tablet} {
+        font-size: 1.2em;
+      }
       a {
         color:#7c7c7c;
         margin-left:10px;

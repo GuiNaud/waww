@@ -1,6 +1,6 @@
 
 function displayInput() {
-    $("#search .md-button").on('click', function(event) {
+    $("#search button").on('click', function(event) {
         event.preventDefault();
         if(!$("#search .md-input-has-placeholder").is(':visible')) {
             $("#search .md-input-has-placeholder").show();

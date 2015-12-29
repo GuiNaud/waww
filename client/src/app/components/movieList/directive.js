@@ -20,7 +20,7 @@
 
             },
             link: function(scope, elm, attrs){
-                scope.toLoad = $(window).width() >= 767 ? true : false;
+                scope.toLoad = $(window).width() >= 1024 ? true : false;
             }
         };
     }

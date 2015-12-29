@@ -99,10 +99,13 @@ ul, li {
 }
 
 
-body{
+body > * {
   font-family: $corbert;
   overflow-x: hidden;
   ::-webkit-scrollbar {
     display:none;
+  }
+  &:focus {
+    outline:0;
   }
 }
