@@ -1,10 +1,8 @@
-<div>
-    <button data-ng-if="!vm.filter" onclick="goBack()"> < </button>
-    <h2>Similar Movies</h2>
+<div class="similar">
     <ul>
         <li data-ng-repeat="similarmovie in ::vm.similarmovies">
             <a href ui-sref="root.movieDetail({id: similarmovie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ similarmovie.poster_path }}"></a>
-            <movie-video data-id="{{similarmovie.id}}" data-filter="1"></movie-video>
+            <!--<movie-video data-id="{{similarmovie.id}}" data-filter="1"></movie-video>-->
         </li>
     </ul>
 </div>

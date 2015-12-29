@@ -1,11 +1,25 @@
-<div data-ng-cloak>
-    <h2>Cast</h2>
-    <ul>
-        <li data-ng-repeat="creditsmovie in ::vm.creditsmovies">
-            <a href ui-sref="root.peopleDetail({id: creditsmovie.id})">
-                {{creditsmovie.name}}
-                <img data-ng-if="creditsmovie.profile_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditsmovie.profile_path }}">
-            </a>
-        </li>
-    </ul>
+<div class="credits">
+    <div class="cast">
+        <ul>
+            <li data-ng-repeat="crew in ::vm.crews" data-ng-if="crew.job=='Director'">
+                <h3>{{crew.job}}</h3>
+                <a href ui-sref="root.peopleDetail({id: crew.id})">
+                    {{crew.name}}
+                    <img data-ng-if="creditsmovie.profile_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditsmovie.profile_path }}">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="cast">
+        <h3>Cast</h3>
+        <ul>
+            <li data-ng-repeat="creditsmovie in ::vm.creditsmovies">
+                <a href ui-sref="root.peopleDetail({id: creditsmovie.id})">
+                    {{creditsmovie.name}}
+                    <img data-ng-if="creditsmovie.profile_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditsmovie.profile_path }}">
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </div>

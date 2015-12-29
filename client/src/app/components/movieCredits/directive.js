@@ -16,6 +16,7 @@
                 var filter = vm.filter;
                 MovieCreditsService.getOneMovie($stateParams.id).then(function(data){
                     vm.creditsmovies = filter > 0 ? _.slice(data.data.cast, 0, filter) : data.data.cast;
+                    vm.crews = data.data.crew;
                 });
             },
             link: function(scope, elm, attrs) {
