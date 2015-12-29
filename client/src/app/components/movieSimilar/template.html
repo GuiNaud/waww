@@ -1,8 +1,13 @@
-<div class="similar" data-ng-if="vm.similarmovies!=''">
-    <h3>Similar Movies</h3>
-    <ul>
-        <li data-ng-repeat="similarmovie in ::vm.similarmovies">
-            <a href ui-sref="root.movieDetail({id: similarmovie.id})"><img data-ng-src="http://image.tmdb.org/t/p/w500/{{ similarmovie.poster_path }}"></a>
-        </li>
-    </ul>
+<div>
+    <h3 data-ng-if="vm.similarmovies!=''">Similar Movies</h3>
+    <div class="similar">
+        <ul>
+            <li data-ng-repeat="similarmovie in ::vm.similarmovies">
+                <a href ui-sref="root.movieDetail({id: similarmovie.id})">
+                    <img data-ng-if="similarmovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ similarmovie.poster_path }}">
+                    <div data-ng-if="!similarmovie.poster_path" class="randomPic"><i class="fa fa-film fa-3x"></i><p>{{similarmovie.title}}</p></div>
+                </a>
+            </li>
+        </ul>
+    </div>
 </div>

@@ -6,7 +6,8 @@
         <ul>
             <li data-ng-repeat="airing in ::vm.airings">
                 <a href ui-sref="root.tvDetail({id: airing.id})">
-                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ airing.poster_path }}" alt="{{ airing.name }}">
+                    <img data-ng-if="airing.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ airing.poster_path }}" alt="{{ airing.name }}">
+                    <div data-ng-if="!airing.poster_path" class="randomPic"><i class="fa fa-tv fa-3x"></i><p>{{airing.name}}</p></div>
                 </a>
             </li>
         </ul>
@@ -15,7 +16,8 @@
         <ul>
             <li data-ng-repeat="airing in ::vm.airings">
                 <a href ui-sref="root.tvDetail({id: airing.id})">
-                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ airing.poster_path }}" alt="{{ airing.name }}">
+                    <img data-ng-if="airing.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ airing.poster_path }}" alt="{{ airing.name }}">
+                    <div data-ng-if="!airing.poster_path" class="randomPic"><i class="fa fa-tv fa-3x"></i><p>{{airing.name}}</p></div>
                 </a>
                 <tv-video data-filter="1" data-id="{{airing.id}}"></tv-video>
             </li>

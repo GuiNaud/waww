@@ -6,6 +6,7 @@
                 <a href ui-sref="root.peopleDetail({id: creditstv.id})">
                     {{creditstv.name}}
                     <img data-ng-if="creditstv.profile_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditstv.profile_path }}">
+                    <div data-ng-if="!creditstv.profile_path" class="randomPic"><i class="fa fa-user fa-3x"></i><p>{{creditstv.name}}</p></div>
                 </a>
             </li>
         </ul>

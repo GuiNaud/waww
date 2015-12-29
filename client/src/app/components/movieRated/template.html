@@ -6,7 +6,8 @@
         <ul>
             <li data-ng-repeat="ratedmovie in ::vm.ratedmovies">
                 <a href ui-sref="root.movieDetail({id: ratedmovie.id})">
-                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedmovie.poster_path }}" alt="{{ ratedmovie.title }}">
+                    <img data-ng-if="ratedmovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedmovie.poster_path }}" alt="{{ ratedmovie.title }}">
+                    <div data-ng-if="!ratedmovie.poster_path" class="randomPic"><i class="fa fa-film fa-3x"></i><p>{{ratedmovie.title}}</p></div>
                 </a>
             </li>
         </ul>
@@ -15,7 +16,8 @@
         <ul>
             <li data-ng-repeat="ratedmovie in ::vm.ratedmovies">
                 <a href ui-sref="root.movieDetail({id: ratedmovie.id})">
-                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedmovie.poster_path }}" alt="{{ ratedmovie.title }}">
+                    <img data-ng-if="ratedmovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ ratedmovie.poster_path }}" alt="{{ ratedmovie.title }}">
+                    <div data-ng-if="!ratedmovie.poster_path" class="randomPic"><i class="fa fa-film fa-3x"></i><p>{{ratedmovie.title}}</p></div>
                 </a>
                 <movie-video data-filter="1" data-id="{{ratedmovie.id}}"></movie-video>
             </li>

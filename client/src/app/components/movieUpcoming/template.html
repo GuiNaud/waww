@@ -6,7 +6,8 @@
         <ul>
             <li data-ng-repeat="upcoming in ::vm.upcomings">
                 <a href ui-sref="root.movieDetail({id: upcoming.id})">
-                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.title }}">
+                    <img data-ng-if="upcoming.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.title }}">
+                    <div data-ng-if="!upcoming.poster_path" class="randomPic"><i class="fa fa-film fa-3x"></i><p>{{upcoming.title}}</p></div>
                 </a>
             </li>
         </ul>
@@ -15,7 +16,8 @@
         <ul>
             <li data-ng-repeat="upcoming in ::vm.upcomings">
                 <a href ui-sref="root.movieDetail({id: upcoming.id})">
-                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.title }}">
+                    <img data-ng-if="upcoming.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ upcoming.poster_path }}" alt="{{ upcoming.title }}">
+                    <div data-ng-if="!upcoming.poster_path" class="randomPic"><i class="fa fa-film fa-3x"></i><p>{{upcoming.title}}</p></div>
                 </a>
                 <movie-video data-filter="1" data-id="{{upcoming.id}}"></movie-video>
             </li>

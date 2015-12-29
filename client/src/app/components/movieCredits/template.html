@@ -6,6 +6,7 @@
                 <a href ui-sref="root.peopleDetail({id: crew.id})">
                     {{crew.name}}
                     <img data-ng-if="crew.profile_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ crew.profile_path }}">
+                    <div data-ng-if="!crew.profile_path" class="randomPic"><i class="fa fa-user fa-3x"></i><p>{{crew.name}}</p></div>
                 </a>
             </li>
         </ul>
@@ -17,6 +18,7 @@
                 <a href ui-sref="root.peopleDetail({id: creditsmovie.id})">
                     {{creditsmovie.name}}
                     <img data-ng-if="creditsmovie.profile_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ creditsmovie.profile_path }}">
+                    <div data-ng-if="!creditsmovie.profile_path" class="randomPic"><i class="fa fa-user fa-3x"></i><p>{{creditsmovie.name}}</p></div>
                 </a>
             </li>
         </ul>

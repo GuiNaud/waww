@@ -30,11 +30,11 @@
                                     var name = value.title ? value.title : value.name;
                                     var result, type;
                                     if(value.media_type == 'movie') {
-                                        result =  '<b><a href="#/movies/' + value.id + '">'+ value.title +'</a></b><span class="movie">' + value.media_type + '</span>' ;
+                                        result =  '<b><a href="#/movies/' + value.id + '">'+ value.title +'</a></b><span class="movie"><i class="fa fa-film"></i></span>' ;
                                     } else if(value.media_type == 'tv') {
-                                        result = '<b><a href="#/tvshows/' + value.id + '">'+ value.name +'</a></b><span class="tv">' + value.media_type + '</span>';
+                                        result = '<b><a href="#/tvshows/' + value.id + '">'+ value.name +'</a></b><span class="tv"><i class="fa fa-tv"></i></span>';
                                     } else{
-                                        result = '<b><a href="#/people/' + value.id + '">'+ value.name +'</a></b><span class="people">' + value.media_type + '</span>';
+                                        result = '<b><a href="#/people/' + value.id + '">'+ value.name +'</a></b><span class="people"><i class="fa fa-user"></i></span>';
                                     }
                                     $(".autocomplete ul").append('<li>'+result+'</li>');
                                 });

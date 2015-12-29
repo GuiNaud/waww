@@ -6,7 +6,8 @@
         <ul>
             <li data-ng-repeat="categorymovie in ::vm.categorymovies">
                 <a href ui-sref="root.movieDetail({id: categorymovie.id})">
-                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorymovie.poster_path }}" alt="{{ categorymovie.title }}">
+                    <img data-ng-if="categorymovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorymovie.poster_path }}" alt="{{ categorymovie.title }}">
+                    <div data-ng-if="!categorymovie.poster_path" class="randomPic"><i class="fa fa-film fa-3x"></i><p>{{category.title}}</p></div>
                 </a>
             </li>
         </ul>
@@ -15,7 +16,8 @@
         <ul>
             <li data-ng-repeat="categorymovie in ::vm.categorymovies">
                 <a href ui-sref="root.movieDetail({id: categorymovie.id})">
-                    <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorymovie.poster_path }}" alt="{{ categorymovie.title }}">
+                    <img data-ng-if="categorymovie.poster_path" data-ng-src="http://image.tmdb.org/t/p/w500/{{ categorymovie.poster_path }}" alt="{{ categorymovie.title }}">
+                    <div data-ng-if="!categorymovie.poster_path" class="randomPic"><i class="fa fa-film fa-3x"></i><p>{{category.title}}</p></div>
                 </a>
                 <movie-video data-filter="1" data-id="{{categorymovie.id}}"></movie-video>
             </li>
