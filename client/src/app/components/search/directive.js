@@ -17,6 +17,7 @@
                 var query = $scope.test ? $scope.test : $stateParams.id;
                 SearchService.getResults(query).then(function(data) {
                     vm.querieslist = data.data.results;
+                    vm.query = query;
                 })
             },
             link: function($scope, element, attrs, model, SearchService) {
