@@ -27,6 +27,15 @@
         font-size: 1.7em;
       }
     }
+    @media #{$desktop} {
+      margin-top:10px;
+      i {
+        font-size: 3em;
+      }
+      h1 {
+        font-size: 2em;
+      }
+    }
   }
   .results { //Home
     overflow-y: hidden;
@@ -44,6 +53,10 @@
             @media #{$tablet} {
               width:190px;
               height:285px;
+            }
+            @media #{$desktop} {
+              width:250px;
+              height:375px;
             }
           }
           .randomPic, .customPic {
@@ -71,6 +84,16 @@
               }
               p {
                 font-size: 1.5em;
+              }
+            }
+            @media #{$desktop} {
+              width:250px;
+              height:375px;
+              i {
+                font-size: 5em;
+              }
+              p {
+                font-size: 2em;
               }
             }
           }
@@ -95,6 +118,10 @@
           width:190px;
           max-height:285px;
         }
+        @media #{$desktop} {
+          width:250px;
+          max-height:375px;
+        }
         a {
           img {
             @media #{$phone} {
@@ -104,6 +131,10 @@
             @media #{$tablet} {
               width:190px;
               height:285px;
+            }
+            @media #{$desktop} {
+              width:250px;
+              height:375px;
             }
           }
           .randomPic, .customPic {
@@ -131,6 +162,16 @@
               }
               p {
                 font-size: 1.5em;
+              }
+            }
+            @media #{$desktop} {
+              width:250px;
+              height:375px;
+              i {
+                font-size: 5em;
+              }
+              p {
+                font-size: 2em;
               }
             }
           }
@@ -191,6 +232,9 @@
     text-align:center;
     @media #{$tablet} {
       font-size: 1.5em;
+    }
+    @media #{$desktop} {
+      font-size: 2em;
     }
   }
 }

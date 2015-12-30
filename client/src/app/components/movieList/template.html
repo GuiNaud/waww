@@ -5,9 +5,6 @@
     <ul ng-init="toLoad=false">
         <li data-ng-repeat="listmovie in ::vm.listmovies" ng-model="toLoad">
             <a href ui-sref="root.movieCategory({id: listmovie.id, name:listmovie.name})"><img src="../../../../assets/images/movie/{{listmovie.name}}.png" alt="{{listmovie.name}}">{{listmovie.name}}</a>
-            <span class="resultsByCategory" data-ng-if="toLoad">
-                <movie-category data-filter="5" data-id="{{listmovie.id}}"></movie-category>
-            </span>
         </li>
     </ul>
 </div>
