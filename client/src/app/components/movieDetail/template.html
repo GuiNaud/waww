@@ -1,7 +1,7 @@
 <div class="detailView" style="background: url(http://image.tmdb.org/t/p/w500/{{vm.detailmovie.backdrop_path}}) no-repeat fixed center;background-size: cover;" data-ng-cloak>
     <div class="lighter"></div>
     <div data-ng-if="!vm.filter" class="title">
-        <md-button onclick="goBack()"><i class="fa fa-angle-left fa-2x"></i></md-button><h1>{{vm.detailmovie.title}}</h1>
+        <md-button ng-click="goBack()"><i class="fa fa-angle-left fa-2x"></i></md-button><h1>{{vm.detailmovie.title}}</h1>
     </div>
     <div class="cat">
         <ul>

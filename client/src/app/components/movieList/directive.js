@@ -21,6 +21,10 @@
             },
             link: function(scope, elm, attrs){
                 scope.toLoad = $(window).width() >= 1024 ? true : false;
+
+                scope.goBack = function() {
+                    window.history.back();
+                };
             }
         };
     }

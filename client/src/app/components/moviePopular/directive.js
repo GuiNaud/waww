@@ -27,7 +27,9 @@
                 });
             },
             link: function(scope, elm, attrs){
-
+                scope.goBack = function() {
+                    window.history.back();
+                };
             }
         };
     }

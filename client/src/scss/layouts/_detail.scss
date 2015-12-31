@@ -199,6 +199,7 @@
     }
     ul {
       li {
+        vertical-align: top;
         display: inline-block;
         margin:1%;
         button {
@@ -217,7 +218,7 @@
         span {
           .episode {
             display:block;
-            width:350px;
+            min-width:350px;
             margin-top:1%;
             ul {
               li {
@@ -262,14 +263,14 @@
           }
           span {
             .episode {
-              width:700px;
+              min-width:700px;
               margin-top:2%;
             }
           }
         }
       }
     }
-    @media #{$tablet} {
+    @media #{$desktop} {
       h3 {
         font-size: 2em;
       }
@@ -286,7 +287,7 @@
           }
           span {
             .episode {
-              width:1023px;
+              min-width:1023px;
               margin-top:2%;
             }
           }

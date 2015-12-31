@@ -20,8 +20,10 @@
                     vm.query = query;
                 })
             },
-            link: function($scope, element, attrs, model, SearchService) {
-
+            link: function(scope, element, attrs) {
+                scope.goBack = function() {
+                    window.history.back();
+                };
             }
         };
     }

@@ -98,14 +98,15 @@ ul, li {
   list-style: none !important;
 }
 
+::-webkit-scrollbar {
+  display:none;
+}
 
 body > * {
   font-family: $corbert;
   overflow-x: hidden;
-  ::-webkit-scrollbar {
-    display:none;
-  }
-  &:focus {
+
+  &:focus, &:hover {
     outline:0;
   }
 }
