@@ -22,7 +22,13 @@
                 });
             },
             link: function(scope, elm, attrs) {
-
+                console.log(scope.episodeDisplay);
+                if(!scope.episodeDisplay) {
+                    var width = $(window).width() - (($(window).width() * 5) / 100);
+                    $(".episode").css({
+                        width : width
+                    });
+                }
             }
         };
     }
