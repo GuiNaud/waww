@@ -20,7 +20,6 @@
 
                 //A l'affichage de la page
                 scope.hideMenu = function () {
-                    console.log('ok');
                     $(".navbar-header button").addClass(' collapsed');
                     $(".navbar-collapse").removeClass('in');
                 };
@@ -68,7 +67,7 @@
                 };
 
                 //autocomplete
-                scope.$watch('test', function(newval) {
+                scope.$watch('query', function(newval) {
                     if(newval) {
                         var search = {};
                         SearchService.getResults(newval).then(function(data) {
@@ -81,11 +80,11 @@
                                     var name = value.title ? value.title : value.name;
                                     var result, type;
                                     if(value.media_type == 'movie') {
-                                        result =  '<b><a href="#/movies/' + value.id + '">'+ value.title +'</a></b><span class="movie"><i class="fa fa-film"></i></span>' ;
+                                        result =  '<a href="#/movies/' + value.id + '"><b>'+ value.title +'</b><span class="movie"><i class="fa fa-film"></i></span></a>' ;
                                     } else if(value.media_type == 'tv') {
-                                        result = '<b><a href="#/tvshows/' + value.id + '">'+ value.name +'</a></b><span class="tv"><i class="fa fa-tv"></i></span>';
+                                        result = '<a href="#/tvshows/' + value.id + '"><b>'+ value.name +'</b><span class="tv"><i class="fa fa-tv"></i></span></a>';
                                     } else{
-                                        result = '<b><a href="#/people/' + value.id + '">'+ value.name +'</a></b><span class="people"><i class="fa fa-user"></i></span>';
+                                        result = '<a href="#/people/' + value.id + '"><b>'+ value.name +'</b><span class="people"><i class="fa fa-user"></i></span></a>';
                                     }
                                     $(".autocomplete ul").append('<li>'+result+'</li>');
                                 });
@@ -93,7 +92,7 @@
                                     search = {};
                                     $(".autocomplete ul").html('');
                                     $(".autocomplete").hide();
-                                    scope.test = '';
+                                    scope.query = '';
                                 });
                             }
                         });
@@ -102,7 +101,7 @@
                             search = {};
                             $(".autocomplete ul").html('');
                             $(".autocomplete").hide();
-                        }, 2000);
+                        }, 1000);
                     }
                 });
 

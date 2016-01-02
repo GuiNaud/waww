@@ -135,10 +135,14 @@
   position:absolute;
   left:10px;
   width:90%;
+  margin-top:54px;
   background-color: #fff;
   color:#000;
   font-family: 'Open Sans', Arial, sans-serif;
   z-index:10;
+  @media #{$tablet} {
+    margin-top:70px;
+  }
   @media #{$desktop} {
     left:10%;
     width:50%;
@@ -147,19 +151,20 @@
     li {
       display:block;
       padding: 20px 0;
-      border-bottom : 1px solid #7c7c7c;
-      background-color: #000;
+      border-bottom : 1px solid $medOrange;
+      background-color: #fff ;
       @media #{$tablet} {
         font-size: 1.2em;
       }
       a {
-        color:#7c7c7c;
-        margin-left:10px;
+        color: $medOrange;
         opacity: 1 !important;
+        width:100%;
+        display:block;
+        padding: 0 1%;
       }
       span {
         float : right;
-        margin-right: 10px;
         padding:5px;
         border-radius: 2px;
         box-shadow: 0 2px 2px   #303030;

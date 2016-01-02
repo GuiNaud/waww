@@ -22,9 +22,9 @@
                 </li>
             </ul>
         </div>
-        <form id="search" method="get" action ui-sref="root.search({id: test})">
-            <md-input-container md-no-float=""><input type="text" name="test" placeholder="Search" ng-model="test" required>
-                <span class="alert alert-danger" ng-show="test.$error.required">Please enter something</span>
+        <form id="search" method="get" action ui-sref="root.search({id: query})">
+            <md-input-container md-no-float="">
+                <input type="text" name="query" placeholder="Search" ng-model="query" required>
             </md-input-container>
             <md-button ng-click="displayInput()"  ng-submit="submit()" type="button"><i class="fa fa-search"></i></md-button>
         </form>
