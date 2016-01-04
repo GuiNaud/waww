@@ -22,6 +22,7 @@
                 scope.hideMenu = function () {
                     $(".navbar-header button").addClass(' collapsed');
                     $(".navbar-collapse").removeClass('in');
+                    scope.rotateBar();
                 };
 
                 //Animation Burger
